@@ -11,18 +11,29 @@ const ButtonEl = styled.button`
         return props.theme.lightGrey;
     }
   }};
-  color: ${(props) => props.theme.white};
   border-radius: 0.5rem;
-  font-size: 1.8rem;
-  padding: 1.2rem 2rem;
-  cursor: pointer;
+  color: ${(props) => props.theme.white};
+  cursor: ${(props) => (!props.preset ? "auto" : "pointer")};
+  font-size: ${(props) => (props.preset === "primary" ? "1.8rem" : "0.8rem")};
   font-weight: 500;
+  padding: ${(props) =>
+    props.preset === "primary" ? "1.2rem 2rem" : "0.8rem 1.6rem"};
+  border: ${(props) =>
+    props.preset === "secondary" ? "2px solid #C60000" : "none"};
   text-align: center;
+  margin: 4px;
+
+  :hover {
+    background-color: ${(props) =>
+      props.preset === "primary"
+        ? props.theme.yellow
+        : props.theme.marlboroRed};
+  }
 `;
 
 const Button = (props) => {
-  const { preset } = props;
-  return <ButtonEl preset={preset}></ButtonEl>;
+  const { children, preset } = props;
+  return <ButtonEl preset={preset}>{children}</ButtonEl>;
 };
 
 export default Button;
