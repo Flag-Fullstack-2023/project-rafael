@@ -21,6 +21,7 @@ const ButtonEl = styled.button`
   border: ${(props) =>
     props.preset === "secondary" ? "2px solid #C60000" : "none"};
   text-align: center;
+  transition: all ease-in-out 0.2s;
   margin: 4px;
 
   :hover {
