@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const LogoContainer = styled.picture`
-  width: 10rem;
+  width: 20rem;
 `;
 
 const LogoEl = styled.img`
@@ -12,7 +12,7 @@ const LogoEl = styled.img`
 const Logo = () => {
   return (
     <LogoContainer>
-      <LogoEl src="../../logo/Logo_Full.png" alt="F1-FLAG Logo"></LogoEl>
+      <LogoEl src="../../logo/logo-full.png" alt="F1-FLAG Logo"></LogoEl>
     </LogoContainer>
   );
 };

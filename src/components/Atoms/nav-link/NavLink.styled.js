@@ -1,11 +1,11 @@
-import React from "react";
 import styled from "styled-components";
 
-const NavLinkEl = styled.a`
-  color: ${(props) => props.theme.white};
+export const NavLinkEl = styled.a`
+  color: ${(props) => props.theme.colors.white};
   cursor: pointer;
   display: inline-block;
   position: relative;
+  font-size: 1.777rem;
 
   :after {
     bottom: 0;
@@ -15,7 +15,7 @@ const NavLinkEl = styled.a`
     position: absolute;
     transform: scaleX(0);
     width: 100%;
-    background-color: ${(props) => props.theme.marlboroRed};
+    background-color: ${(props) => props.theme.colors.marlboroRed};
     transform-origin: bottom right;
     transition: transform ease-out 0.25s;
   }
@@ -25,10 +25,3 @@ const NavLinkEl = styled.a`
     transform-origin: bottom left;
   }
 `;
-
-const NavLink = (props) => {
-  const { children } = props;
-  return <NavLinkEl>{children}</NavLinkEl>;
-};
-
-export default NavLink;

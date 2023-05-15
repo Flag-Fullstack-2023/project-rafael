@@ -1,14 +1,7 @@
 import React from "react";
-import styled from "styled-components";
-import NavLink from "./NavLink";
-import MenuIcon from "./MenuIcon";
-
-const NavBarEl = styled.nav`
-  align-items: center;
-  display: flex;
-  justify-content: flex-end;
-  gap: 3.2rem;
-`;
+import { NavBarEl } from "./NavBar.styled";
+import NavLink from "../../Atoms/nav-link/NavLink";
+import MenuIcon from "../../../Layout/Header/MenuIcon";
 
 const NavBar = () => {
   return (

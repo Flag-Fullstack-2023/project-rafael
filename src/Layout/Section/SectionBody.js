@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
-import Showroom from "../../components/Showroom/Showroom";
+import Showroom from "../../components/Molecules/showroom/Showroom";
 
 const Section = styled.section`
   background-color: ${(props) => props.theme.darkGrey};
