@@ -1,14 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
-const PlaceholderLogo = styled.div`
+const LogoContainer = styled.picture`
   width: 10rem;
-  height: 1.3rem;
-  background-color: ${(props) => props.theme.white};
+`;
+
+const LogoEl = styled.img`
+  width: 100%;
 `;
 
 const Logo = () => {
-  return <PlaceholderLogo></PlaceholderLogo>;
+  return (
+    <LogoContainer>
+      <LogoEl src="../../logo/Logo_Full.png" alt="F1-FLAG Logo"></LogoEl>
+    </LogoContainer>
+  );
 };
 
 export default Logo;

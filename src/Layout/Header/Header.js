@@ -5,7 +5,7 @@ import Logo from "./Logo";
 
 const HeaderEl = styled.header`
   align-content: center;
-  background-color: ${(props) => props.theme.darkGrey};
+  /* background-color: ${(props) => props.theme.darkGrey}; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 4.8rem;
