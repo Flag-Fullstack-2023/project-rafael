@@ -4,8 +4,9 @@ import styled from "styled-components";
 import Showroom from "../../components/Showroom/Showroom";
 
 const Section = styled.section`
-  background-color: ${(props) => props.theme.white};
+  background-color: ${(props) => props.theme.darkGrey};
   height: 100vh;
+  color: ${(props) => props.theme.white};
 
   .section__title {
     display: flex;
@@ -28,7 +29,7 @@ const Section = styled.section`
 const SectionEl = () => {
   return (
     <Section>
-      <h2 className="section__title">Section Body</h2>
+      <h2 className="section__title">Section Title</h2>
       <article className="section__article">
         <p className="section__description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,

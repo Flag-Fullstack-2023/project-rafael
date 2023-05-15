@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 const LandingPageEl = styled.section`
   height: 100vh;
@@ -23,6 +24,21 @@ const LandingPageEl = styled.section`
     position: absolute;
     top: 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+
+    svg {
+      fill: white;
+      font-size: 7rem;
+      position: absolute;
+      bottom: 3%;
+      transition: all ease-in-out 0.4s;
+
+      :hover {
+        bottom: 2%;
+        cursor: pointer;
+      }
+    }
   }
 
   .quote {
@@ -30,7 +46,7 @@ const LandingPageEl = styled.section`
     grid-template-columns: repeat(2, 1fr);
     position: absolute;
     color: white;
-    top: 20%;
+    top: 15%;
     left: 5%;
 
     &__text {
@@ -55,7 +71,9 @@ const LandingPage = () => {
         alt=""
         className="hero__img"
       />
-      <div className="img__overlay"></div>
+      <div className="img__overlay">
+        <MdKeyboardDoubleArrowDown />
+      </div>
       <div className="quote">
         <q className="quote__text">
           When you longer go for a gap, you're no longer a racing driver
