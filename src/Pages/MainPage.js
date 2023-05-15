@@ -1,18 +1,17 @@
 import React from "react";
 import styled from "styled-components";
-import NavBar from "../Layout/Header/NavBar";
-import Header from "../Layout/Header/Header";
+import SectionEl from "../Layout/Section/SectionBody.js";
 
 const Main = styled.main`
-  background-color: ${(props) => props.theme.marlboroRed};
+  background-color: ${(props) => props.theme.darkGrey};
   margin: 0 auto;
-  max-width: 120rem;
+  width: 90vw;
 `;
 
 const MainPage = () => {
   return (
     <Main>
-      <Header></Header>
+      <SectionEl></SectionEl>
     </Main>
   );
 };

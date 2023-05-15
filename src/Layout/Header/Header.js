@@ -10,6 +10,9 @@ const HeaderEl = styled.header`
   grid-template-columns: repeat(2, 1fr);
   height: 4.8rem;
   padding: 0 3.2rem;
+  position: fixed;
+  width: 100vw;
+  z-index: 9999;
 `;
 
 const Header = () => {
