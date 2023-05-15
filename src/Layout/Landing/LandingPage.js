@@ -78,7 +78,7 @@ const LandingPage = () => {
         <q className="quote__text">
           When you longer go for a gap, you're no longer a racing driver
         </q>
-        <p className="quote__author">- Ayrton Senna, 1990</p>
+        <span className="quote__author">- Ayrton Senna, 1990</span>
       </div>
     </LandingPageEl>
   );
