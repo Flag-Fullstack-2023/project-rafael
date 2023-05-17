@@ -10,10 +10,7 @@ export const BurgerMenu = () => {
     NavBarContext.navClass === ""
       ? NavBarContext.setNavClass("nav_open")
       : NavBarContext.setNavClass("");
-    setIsOpen((prev) => {
-      !prev;
-    });
-    console.log(NavBarContext);
+    setIsOpen(!isOpen);
   };
 
   return (

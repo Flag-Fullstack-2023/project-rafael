@@ -8,8 +8,8 @@ export const Container = styled.div`
     justify-content: flex-end;
 
     .menu_icon {
-      width: 55px;
-      height: 55px;
+      width: 40px;
+      height: 40px;
       margin: 0;
       z-index: 10;
       cursor: pointer;
@@ -23,7 +23,7 @@ export const Container = styled.div`
       position: absolute;
       display: block;
       height: 5px;
-      width: 55px;
+      width: 40px;
       background-color: #fff;
       transform: rotate(0);
       transition: all 200ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
@@ -34,15 +34,15 @@ export const Container = styled.div`
     }
 
     span.two {
-      top: 25px;
+      top: 20px;
     }
 
     span.three {
-      top: 45px;
+      top: 35px;
     }
 
     .clicked .one {
-      transform: translateY(20px) rotate(45deg);
+      transform: translateY(15px) rotate(45deg);
     }
 
     .clicked .two {
@@ -50,7 +50,7 @@ export const Container = styled.div`
     }
 
     .clicked .three {
-      transform: translateY(-20px) rotate(-45deg);
+      transform: translateY(-15px) rotate(-45deg);
     }
   }
 `;
