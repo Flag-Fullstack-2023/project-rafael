@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import SectionEl from "../Layout/Section/SectionBody.js";
-import LandingPage from "../containers/Landing Page/LandingPage.js";
-import Button from "../components/Atoms/button/Button.js";
+import LandingPage from "../components/Pages/LandingPage.js";
 
 const Main = styled.main`
   background-color: ${(props) => props.theme.colors.darkGrey};
