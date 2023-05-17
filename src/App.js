@@ -1,15 +1,13 @@
 import React from "react";
-import { GlobalStyle } from "./styleReset";
+import { GlobalStyle } from "./utils/global";
 import MainPage from "./Pages/MainPage";
-import Header from "./Layout/Header/Header";
-import LandingPage from "./Layout/Landing/LandingPage";
+import Header from "./components/Organisms/Header/Header";
 
 function App() {
   return (
     <React.Fragment>
       <GlobalStyle />
       <Header />
-      <LandingPage />
       <MainPage />
     </React.Fragment>
   );

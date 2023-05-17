@@ -1,16 +1,14 @@
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
-import Showroom from "../../components/Showroom/Showroom";
+import Showroom from "../../components/Molecules/showroom/Showroom";
+import SectionTitle from "../../components/Atoms/hero-title/SectionTitle";
 
 const Section = styled.section`
-  background-color: ${(props) => props.theme.white};
+  background-color: ${(props) => props.theme.darkGrey};
   height: 100vh;
-
-  .section__title {
-    display: flex;
-    justify-content: center;
-  }
+  color: ${(props) => props.theme.white};
+  margin: 10rem auto;
 
   .section__article {
     display: grid;
@@ -28,7 +26,7 @@ const Section = styled.section`
 const SectionEl = () => {
   return (
     <Section>
-      <h2 className="section__title">Section Body</h2>
+      <SectionTitle>The Car</SectionTitle>
       <article className="section__article">
         <p className="section__description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
