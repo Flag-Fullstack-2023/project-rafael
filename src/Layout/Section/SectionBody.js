@@ -10,10 +10,6 @@ const Section = styled.section`
   color: ${(props) => props.theme.white};
   margin: 10rem auto;
 
-  .section__title {
-    text-align: center;
-  }
-
   .section__article {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
