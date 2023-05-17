@@ -1,22 +1,15 @@
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
-import Showroom from "../../components/Molecules/showroom/Showroom";
-import SectionTitle from "../../components/Atoms/hero-title/SectionTitle";
-import SectionContent from "../../components/Organisms/section/section";
+import Showroom from "../../components/molecules/_showroom/_showroom";
+import SectionTitle from "../../components/atoms/section-title/section-title";
+import SectionContent from "../../components/organisms/section/section";
 
 const Section = styled.section`
   background-color: ${(props) => props.theme.darkGrey};
   height: 100vh;
   color: ${(props) => props.theme.white};
   margin: 10rem auto;
-
-  .section__article {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 6rem;
-  }
 
   .section__media {
     max-height: 500px;
@@ -28,7 +21,7 @@ const SectionEl = () => {
   return (
     <Section>
       <SectionTitle>The Car</SectionTitle>
-      <SectionContent className="section__article">
+      <SectionContent>
         <p className="section__description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
           veritatis fugiat earum eveniet voluptates sed beatae nulla dignissimos
