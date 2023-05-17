@@ -10,13 +10,15 @@ export const BurgerMenu = () => {
     NavBarContext.navClass === ""
       ? NavBarContext.setNavClass("nav_open")
       : NavBarContext.setNavClass("");
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => {
+      !prev;
+    });
     console.log(NavBarContext);
   };
 
   return (
     <Container className="burger_container" onClick={onClickHandler}>
-      <div className={isOpen ? "menu_icon clicked" : "menu_icon"}>
+      <div className={`menu_icon ${isOpen ? "clicked" : ""}`}>
         <span className="one"></span>
         <span className="two"></span>
         <span className="three"></span>
