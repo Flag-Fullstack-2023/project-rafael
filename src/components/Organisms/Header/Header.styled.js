@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { theme } from "../../../theme";
 
 export const HeaderEl = styled.header`
-  /* background-color: ${(props) => props.theme.darkGrey}; */
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: 8rem;
