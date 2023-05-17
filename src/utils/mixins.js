@@ -34,3 +34,5 @@ export const breakpoints = {
   // 600px
   mobileonly: "(max-width: 37.5em)",
 };
+
+export const fontSizes = {};

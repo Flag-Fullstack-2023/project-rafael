@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../../utils/breakpoints";
 
 export const NavLinkEl = styled.a`
   color: ${(props) => props.theme.colors.white};
@@ -23,5 +24,9 @@ export const NavLinkEl = styled.a`
   :hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+
+  @media ${breakpoints.untilLaptop} {
+    font-size: 3.157rem;
   }
 `;

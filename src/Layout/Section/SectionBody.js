@@ -2,15 +2,16 @@ import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
 import Showroom from "../../components/Molecules/showroom/Showroom";
+import SectionTitle from "../../components/Atoms/hero-title/SectionTitle";
 
 const Section = styled.section`
   background-color: ${(props) => props.theme.darkGrey};
   height: 100vh;
   color: ${(props) => props.theme.white};
+  margin: 10rem auto;
 
   .section__title {
-    display: flex;
-    justify-content: center;
+    text-align: center;
   }
 
   .section__article {
@@ -29,7 +30,7 @@ const Section = styled.section`
 const SectionEl = () => {
   return (
     <Section>
-      <h2 className="section__title">Section Title</h2>
+      <SectionTitle>The Car</SectionTitle>
       <article className="section__article">
         <p className="section__description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
