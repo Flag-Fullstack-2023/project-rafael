@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import Showroom from "../../components/Molecules/showroom/Showroom";
 import SectionTitle from "../../components/Atoms/hero-title/SectionTitle";
+import SectionContent from "../../components/Organisms/section/section";
 
 const Section = styled.section`
   background-color: ${(props) => props.theme.darkGrey};
@@ -27,7 +28,7 @@ const SectionEl = () => {
   return (
     <Section>
       <SectionTitle>The Car</SectionTitle>
-      <article className="section__article">
+      <SectionContent className="section__article">
         <p className="section__description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
           veritatis fugiat earum eveniet voluptates sed beatae nulla dignissimos
@@ -40,7 +41,7 @@ const SectionEl = () => {
             <Showroom />
           </Canvas>
         </div>
-      </article>
+      </SectionContent>
     </Section>
   );
 };
