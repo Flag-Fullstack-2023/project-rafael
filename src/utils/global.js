@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    background: ${(props) => props.theme.darkGrey};
+    ${"" /* background: ${(props) => props.theme.darkGrey}; */}
     cursor: default;
     overflow-x: hidden;
   }

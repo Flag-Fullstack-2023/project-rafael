@@ -1,19 +1,16 @@
-import { Canvas } from "@react-three/fiber";
 import React from "react";
 import Section from "../organisms/section/section";
 import SectionTitle from "../atoms/section-title/section-title";
 import SectionContent from "../molecules/section-content/section-content";
 import SectionText from "../atoms/section-text/section-text";
 import SectionMedia from "../atoms/section-media/section-media";
-import Showroom from "../molecules/showroom/showroom";
 
-const CarSection = (props) => {
+const SennaSection = (props) => {
   const { preset } = props;
   const sectionPreset = preset;
-
   return (
     <Section preset={sectionPreset}>
-      <SectionTitle preset={sectionPreset}>The Car</SectionTitle>
+      <SectionTitle preset={sectionPreset}>Ayrton Senna</SectionTitle>
       <SectionContent>
         <SectionText preset={sectionPreset}>
           The McLaren MP4/5 was a highly successful Formula One racing car
@@ -34,14 +31,10 @@ const CarSection = (props) => {
           the pace, as well as reliable. Developed by Neil Oatley, the MP4/5
           looked like the car to beat in the new season.
         </SectionText>
-        <SectionMedia>
-          <Canvas shadows>
-            <Showroom />
-          </Canvas>
-        </SectionMedia>
+        <SectionMedia></SectionMedia>
       </SectionContent>
     </Section>
   );
 };
 
-export default CarSection;
+export default SennaSection;
