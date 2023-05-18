@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import SectionEl from "../layout/Section/SectionBody";
 import LandingPage from "../components/pages/landing-page.js";
+import CarSection from "../components/pages/car-section";
+import Button from "../components/atoms/button/button.js";
 
 const Main = styled.main`
   background-color: ${(props) => props.theme.colors.darkGrey};
@@ -13,7 +14,8 @@ const MainPage = () => {
   return (
     <Main>
       <LandingPage />
-      <SectionEl></SectionEl>
+      <CarSection preset="dark"></CarSection>
+      <Button preset="primary"></Button>
     </Main>
   );
 };

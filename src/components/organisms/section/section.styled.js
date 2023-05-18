@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { theme } from "../../../theme";
 
-export const SectionEl = styled.article`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 6rem;
+export const SectionEl = styled.section`
+  background-color: ${(props) => props.theme[props.preset].background};
+  height: 100vh;
+  color: ${(props) => props.theme[props.preset]};
+  margin: 10rem auto;
 `;

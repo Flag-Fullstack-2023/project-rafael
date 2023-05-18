@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { theme } from "../../../theme";
 
 export const Title = styled.h2`
-  color: ${theme.colors.white};
+  background-color: ${(props) => props.theme[props.preset].background};
+  color: ${(props) => props.theme[props.preset].color};
   text-align: center;
 `;
