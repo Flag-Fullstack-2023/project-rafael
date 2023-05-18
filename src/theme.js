@@ -31,6 +31,14 @@ const theme = {
     onHoverBackground: "",
     padding: "1.2rem 2rem",
   },
+  dark: {
+    background: "#141414",
+    color: "#fff",
+  },
+  light: {
+    background: "#fff",
+    color: "#000",
+  },
 };
 
 export { theme };
