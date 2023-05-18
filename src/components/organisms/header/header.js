@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HeaderEl } from "./header.styled.js";
 import NavBar from "../../molecules/nav-bar/nav-bar.js";
-import Logo from "../../atoms/_logo/_logo.js";
+import Logo from "../../atoms/logo/logo.js";
 
 const Header = () => {
   const [bgColor, setBgColor] = useState(false);

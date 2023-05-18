@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import styled from "styled-components";
-import Showroom from "../../components/molecules/_showroom/_showroom";
+import Showroom from "../../components/molecules/showroom/showroom";
 import SectionTitle from "../../components/atoms/section-title/section-title";
 import SectionContent from "../../components/organisms/section/section";
 

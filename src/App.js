@@ -1,7 +1,7 @@
 import React from "react";
 import { GlobalStyle } from "./utils/global";
 import MainPage from "./pages/MainPage";
-import Header from "./components/organisms/_header/_header";
+import Header from "./components/organisms/header/header";
 
 function App() {
   return (

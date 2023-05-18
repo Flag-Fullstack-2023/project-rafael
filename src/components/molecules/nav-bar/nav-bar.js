@@ -1,6 +1,6 @@
 import { NavBarEl } from "./nav-bar.styled";
 import NavLink from "../../atoms/nav-link/nav-link";
-import { BurgerMenu } from "../../atoms/_burger-menu/burger-menu";
+import { BurgerMenu } from "../../atoms/burger-menu/burger-menu";
 import { createContext } from "react";
 import { useState } from "react";
 
