@@ -4,6 +4,7 @@ import SectionTitle from "../atoms/section-title/section-title";
 import SectionContent from "../molecules/section-content/section-content";
 import SectionText from "../atoms/section-text/section-text";
 import SectionMedia from "../atoms/section-media/section-media";
+import Gallery from "../molecules/gallery/gallery";
 
 const SennaSection = (props) => {
   const { preset } = props;
@@ -31,7 +32,9 @@ const SennaSection = (props) => {
           the pace, as well as reliable. Developed by Neil Oatley, the MP4/5
           looked like the car to beat in the new season.
         </SectionText>
-        <SectionMedia></SectionMedia>
+        <SectionMedia>
+          <Gallery driver="AyrtonSenna" />
+        </SectionMedia>
       </SectionContent>
     </Section>
   );
