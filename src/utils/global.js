@@ -35,6 +35,7 @@ export const GlobalStyle = createGlobalStyle`
   button {
     border: none;
     outline: none;
+    background: none;
   }
 
   p {margin-bottom: 1rem;}

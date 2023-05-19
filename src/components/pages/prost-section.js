@@ -4,15 +4,19 @@ import SectionTitle from "../atoms/section-title/section-title";
 import SectionContent from "../molecules/section-content/section-content";
 import SectionText from "../atoms/section-text/section-text";
 import SectionMedia from "../atoms/section-media/section-media";
+import Gallery from "../molecules/gallery/gallery";
 
 const ProstSection = (props) => {
   const { preset } = props;
   const sectionPreset = preset;
+
   return (
     <Section preset={sectionPreset}>
       <SectionTitle preset={sectionPreset}>Alain Prost</SectionTitle>
       <SectionContent preset={sectionPreset}>
-        <SectionMedia></SectionMedia>
+        <SectionMedia>
+          <Gallery driver="AlainProst" />
+        </SectionMedia>
         <SectionText preset={sectionPreset}>
           The McLaren MP4/5 was a highly successful Formula One racing car
           designed by the McLaren Formula One team based in Woking, England, and

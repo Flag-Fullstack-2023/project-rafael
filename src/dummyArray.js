@@ -1,0 +1,36 @@
+export const dummyArray = {
+  AlainProst: {
+    id: "1",
+    driverName: "Alain Prost",
+    description: "",
+    images: [
+      "https://www.f1-photo.com/Ressources/Gallery/1989/Monaco/Prost_1989_Monaco_02_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1989/Monaco/Prost_1989_Monaco_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1989/Japan/Prost-Balestre_1989_Japan_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1989/USA/Prost_1989_USA_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1988/Portugal/Prost_1988_Portugal_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1989/Japan/Prost_1989_Japan_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1989/Germany/Prost_1989_Germany_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1989/Hungary/Prost-Oatley_1989_Hungary_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1984/Italy/Prost_1984_Italy_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1986/Italy/Prost_1986_Italy_01_PHC.jpg",
+    ],
+  },
+  AyrtonSenna: {
+    id: "2",
+    driverName: "Ayrton Senna",
+    description: "",
+    images: [
+      "https://www.f1-photo.com/Ressources/Gallery/1988/Germany/Senna_1988_Germany_03_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1984/Canada/Senna_1984_Canada_02_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1989/France/Senna-Murray_1989_France_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1985/Austria/Senna_1985_Austria_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1985/Belgium/Senna_1985_Belgium_03_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1988/France/Senna_1988_France_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1989/France/Senna_1989_France_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1989/Brazil/Senna_1989_Brazil_01_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1989/Brazil/Senna_1989_Brazil_03_PHC.jpg",
+      "https://www.f1-photo.com/Ressources/Gallery/1989/Germany/Senna_1989_Germany_01_PHC.jpg",
+    ],
+  },
+};
