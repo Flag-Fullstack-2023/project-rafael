@@ -3,7 +3,6 @@ import { GalleryEl } from "./gallery.styled";
 import Cell from "../../atoms/gallery-cell/gallery-cell";
 import ForwardArrow from "../../atoms/forward-arrow-svg/forward-arrow-svg";
 import BackArrow from "../../atoms/back-arrow-svg/back-arrow-svg";
-import { dummyArray } from "../../../dummyArray";
 import LeftEl from "../../atoms/arrow-previous/arrow-previous";
 import RightEl from "../../atoms/arrow-forward/arrow-forward";
 
