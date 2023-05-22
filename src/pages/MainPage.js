@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import LandingPage from "../components/pages/landing-page.js";
+import LandingPage from "../components/pages/landing-page";
 import CarSection from "../components/pages/car-section";
-import ProstSection from "../components/pages/prost-section.js";
-import SennaSection from "../components/pages/senna-section.js";
+import ProstSection from "../components/pages/prost-section";
+import SennaSection from "../components/pages/senna-section";
 
 const Main = styled.main`
   margin: 0 auto;
