@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ArticleEl = styled.article`
+export const SectionContent = styled.article`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;

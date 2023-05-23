@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeroEl = styled.section`
+export const Hero = styled.section`
   height: 100vh;
   position: relative;
 `;

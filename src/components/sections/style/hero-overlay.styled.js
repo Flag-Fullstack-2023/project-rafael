@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Overlay = styled.div`
+export const HeroOverlay = styled.div`
   background: rgb(57, 66, 61);
   background: linear-gradient(
     180deg,
