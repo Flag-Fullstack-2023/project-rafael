@@ -4,7 +4,7 @@ import { SectionContent } from "./style/section-content.styled";
 import SectionText from "../atoms/section-text/section-text";
 import Gallery from "../molecules/gallery/gallery";
 
-const DriverSection = ({ name, bio, images, id }) => {
+const DriverSection = ({ name, bio, images }) => {
   let sectionPreset;
 
   switch (name) {

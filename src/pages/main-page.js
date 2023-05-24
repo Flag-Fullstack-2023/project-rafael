@@ -1,33 +1,27 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import LandingPage from "../components/sections/landing-page.js";
-import CarSection from "../components/sections/car-section";
-import DriverSection from "../components/sections/driver-section.js";
 import axios from "axios";
-
-const Main = styled.main`
-  margin: 0 auto;
-  width: 100vw;
-`;
+import { Main } from "./style/main-page.styled";
+import {
+  LandingPage,
+  CarSection,
+  DriverSection,
+} from "../components/sections/index.js";
 
 const MainPage = () => {
   const [driverInfo, setDriverInfo] = useState({});
   const [carInfo, setCarInfo] = useState({});
+  const API_URL = "https://6467aee160c8cb9a2c9a978a.mockapi.io/f1-flag";
 
   useEffect(() => {
-    axios
-      .get("https://6467aee160c8cb9a2c9a978a.mockapi.io/f1-flag/drivers")
-      .then((response) => {
-        setDriverInfo(response.data);
-      });
+    axios.get(`${API_URL}/drivers`).then((response) => {
+      setDriverInfo(response.data);
+    });
   }, [setDriverInfo]);
 
   useEffect(() => {
-    axios
-      .get("https://6467aee160c8cb9a2c9a978a.mockapi.io/f1-flag/car")
-      .then((response) => {
-        setCarInfo(response.data);
-      });
+    axios.get(`${API_URL}/car`).then((response) => {
+      setCarInfo(response.data);
+    });
   }, [setCarInfo]);
 
   return (
