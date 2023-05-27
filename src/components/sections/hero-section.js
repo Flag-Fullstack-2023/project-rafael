@@ -1,11 +1,9 @@
 import React from "react";
-import { Quote } from "../molecules/quote/quote";
-import { Hero } from "./style/hero.styled";
+import Quote from "../molecules/quote/quote";
+import { Hero, HeroImg, HeroOverlay } from "./hero-section-styled";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { HeroImg } from "./style/hero-img.styled";
-import { HeroOverlay } from "./style/hero-overlay.styled";
 
-const LandingPage = () => {
+const HeroSection = () => {
   return (
     <Hero>
       <HeroImg
@@ -21,4 +19,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default HeroSection;

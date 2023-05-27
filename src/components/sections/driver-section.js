@@ -1,8 +1,8 @@
 import Section from "../organisms/section/section";
 import SectionTitle from "../atoms/section-title/section-title";
-import { SectionContent } from "./style/section-content.styled";
 import SectionText from "../atoms/section-text/section-text";
 import Gallery from "../molecules/gallery/gallery";
+import { SectionContent } from "./section-content.styled";
 
 const DriverSection = ({ name, bio, images }) => {
   let sectionPreset;
@@ -22,7 +22,7 @@ const DriverSection = ({ name, bio, images }) => {
   return (
     <Section preset={sectionPreset}>
       <SectionTitle preset={sectionPreset}>{name}</SectionTitle>
-      <SectionContent preset={sectionPreset}>
+      <SectionContent preset={sectionPreset} name={name}>
         <Gallery images={images} name={name} />
         <SectionText preset={sectionPreset}>{bio}</SectionText>
       </SectionContent>

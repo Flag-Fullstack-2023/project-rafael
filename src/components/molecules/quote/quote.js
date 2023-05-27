@@ -1,7 +1,7 @@
 import React from "react";
 import { QuoteEl } from "./quote.styled";
 
-export const Quote = (props) => {
+const Quote = (props) => {
   const {
     text = "When you no longer go for a gap, you're no longer a racing driver",
     person = "Ayrton Senna",
@@ -17,3 +17,5 @@ export const Quote = (props) => {
     </QuoteEl>
   );
 };
+
+export default Quote;

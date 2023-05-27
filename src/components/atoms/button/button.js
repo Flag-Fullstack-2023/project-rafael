@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { ButtonEl } from "./button.styled.js";
 
 const Button = (props) => {
