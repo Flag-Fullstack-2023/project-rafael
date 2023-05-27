@@ -1,16 +1,30 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Main } from "./style/main-page.styled";
+import { Main } from "./main-page.styled";
 import {
-  LandingPage,
+  HeroSection,
   CarSection,
   DriverSection,
-} from "../components/sections/index.js";
+} from "../components/sections/";
+import { Title } from "../components/atoms/section-title/section-title-styled";
+import { ChampionshipSection } from "../components/sections/championship-section-styled";
+import { Table } from "../components/molecules";
+import { TableWrapper } from "../components/molecules/table/table-styled";
+import Toggle from "react-styled-toggle";
+import { theme } from "../theme";
+import Button from "../components/atoms/button/button";
 
 const MainPage = () => {
   const [driverInfo, setDriverInfo] = useState({});
   const [carInfo, setCarInfo] = useState({});
+  const [tableInfo, setTableInfo] = useState({});
+  const [tableDriver, setTableDriver] = useState(false);
+  let tableDriverName;
+
+  tableDriver ? (tableDriverName = "senna") : (tableDriverName = "prost");
+
   const API_URL = "https://6467aee160c8cb9a2c9a978a.mockapi.io/f1-flag";
+  const ERGAST_URL = "http://ergast.com/api/f1/1989";
 
   useEffect(() => {
     axios.get(`${API_URL}/drivers`).then((response) => {
@@ -24,10 +38,22 @@ const MainPage = () => {
     });
   }, [setCarInfo]);
 
+  useEffect(() => {
+    axios
+      .get(`${ERGAST_URL}/drivers/${tableDriverName}/results.json`)
+      .then((response) => {
+        setTableInfo(response.data.MRData.RaceTable.Races);
+      });
+  }, [tableDriver, tableDriverName]);
+
+  const onChangeHandle = () => {
+    setTableDriver((prevState) => !prevState);
+  };
+
   return (
     <Main>
-      <LandingPage />
-      {carInfo.length > 0 && (
+      <HeroSection />
+      {carInfo.length && (
         <CarSection
           preset="dark"
           name={carInfo[1].name}
@@ -35,7 +61,7 @@ const MainPage = () => {
           key={carInfo[0].id}
         />
       )}
-      {driverInfo.length > 0 &&
+      {driverInfo.length &&
         driverInfo.map((driver) => (
           <DriverSection
             name={driver.name}
@@ -44,6 +70,22 @@ const MainPage = () => {
             key={driver.id}
           />
         ))}
+      {tableInfo.length && (
+        <ChampionshipSection preset="light">
+          <Title preset="light">1989 Championship</Title>
+          <Toggle
+            backgroundColorUnchecked={theme.colors.darkGrey}
+            backgroundColorChecked={theme.colors.darkGrey}
+            labelLeft="Alain Prost"
+            labelRight="Ayrton Senna"
+            onChange={onChangeHandle}
+          />
+          <TableWrapper>
+            <Table info={tableInfo} />
+          </TableWrapper>
+          <Button preset="primary">CHECK OTHER RESULTS</Button>
+        </ChampionshipSection>
+      )}
     </Main>
   );
 };

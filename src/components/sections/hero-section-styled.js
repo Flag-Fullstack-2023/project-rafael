@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+export const Hero = styled.section`
+  height: 100vh;
+  position: relative;
+`;
+
+export const HeroImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(80%);
+`;
+
 export const HeroOverlay = styled.div`
   background: rgb(57, 66, 61);
   background: linear-gradient(

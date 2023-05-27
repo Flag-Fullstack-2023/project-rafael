@@ -1,9 +1,9 @@
 import React from "react";
-import { TextEl } from "./section-text.styled";
+import { TextWrapper } from "./section-text.styled";
 
 const SectionText = (props) => {
   const { children, preset } = props;
-  return <TextEl preset={preset} >{children}</TextEl>;
+  return <TextWrapper preset={preset}>{children}</TextWrapper>;
 };
 
 export default SectionText;
