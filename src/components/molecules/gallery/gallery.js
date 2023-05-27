@@ -1,29 +1,20 @@
-import React, { createContext, useState } from "react";
-import { GalleryEl } from "./gallery.styled";
-import Cell from "../../atoms/gallery-cell/gallery-cell";
-import ForwardArrow from "../../atoms/forward-arrow-svg/forward-arrow-svg";
-import BackArrow from "../../atoms/back-arrow-svg/back-arrow-svg";
-import { dummyArray } from "../../../dummyArray";
-import LeftEl from "../../atoms/arrow-previous/arrow-previous";
-import RightEl from "../../atoms/arrow-forward/arrow-forward";
+import { GalleryEl } from "../../sections/style/gallery.styled";
+import { Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
 
-export const GalleryContext = createContext();
-
-const Gallery = ({ driver }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+const Gallery = ({ images, name }) => {
   return (
-    <GalleryContext.Provider value={{ currentIndex, setCurrentIndex }}>
-      <GalleryEl>
-        <LeftEl driver={driver} index={currentIndex}>
-          <BackArrow />
-        </LeftEl>
-        <Cell driver={driver} index={currentIndex}></Cell>
-        <RightEl driver={driver} index={currentIndex}>
-          <ForwardArrow />
-        </RightEl>
-      </GalleryEl>
-    </GalleryContext.Provider>
+    <GalleryEl>
+      <Swiper className="swiper" modules={[Navigation]} navigation loop={true}>
+        {images.map((image) => (
+          <SwiperSlide className="swiper-slide">
+            <img src={image} alt={`${name} photo`} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </GalleryEl>
   );
 };
 
