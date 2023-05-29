@@ -1,6 +1,4 @@
 import React from "react";
-import { FooterEl } from "./footer-styled";
-import Logo from "../../atoms/logo/logo";
 import {
   BsLinkedin,
   BsTwitter,
@@ -9,6 +7,10 @@ import {
   BsFacebook,
   BsGithub,
 } from "react-icons/bs";
+
+import Logo from "../../atoms/logo/logo";
+
+import { FooterEl } from "./footer-styled";
 
 const Footer = () => {
   return (
