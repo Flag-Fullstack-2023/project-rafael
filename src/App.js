@@ -1,7 +1,7 @@
 import React from "react";
 import { GlobalStyle } from "./utils/global";
 import MainPage from "./pages/main-page";
-import { Header } from "./components/organisms";
+import { Footer, Header } from "./components/organisms";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <MainPage />
+      <Footer />
     </React.Fragment>
   );
 }

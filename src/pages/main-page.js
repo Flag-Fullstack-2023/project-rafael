@@ -1,27 +1,26 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { Main } from "./main-page.styled";
-import {
-  HeroSection,
-  CarSection,
-  DriverSection,
-} from "../components/sections/";
-import { Title } from "../components/atoms/section-title/section-title-styled";
-import { ChampionshipSection } from "../components/sections/championship-section-styled";
-import { Table } from "../components/molecules";
-import { TableWrapper } from "../components/molecules/table/table-styled";
 import Toggle from "react-styled-toggle";
-import { theme } from "../theme";
+import axios from "axios";
+
 import Button from "../components/atoms/button/button";
+
+import { Table } from "../components/molecules";
+import { TableWrapper } from "../components/molecules/table/table.styled";
+
+import { HeroSection, CarSection, DriverSection } from "../components/sections";
+import { Title } from "../components/atoms/section-title/section-title-styled";
+import { ChampionshipSection } from "../components/sections/championship/championship-section.styled";
+
+import { theme } from "../theme";
+
+import { Main } from "./main-page.styled";
 
 const MainPage = () => {
   const [driverInfo, setDriverInfo] = useState({});
   const [carInfo, setCarInfo] = useState({});
   const [tableInfo, setTableInfo] = useState({});
-  const [tableDriver, setTableDriver] = useState(false);
-  let tableDriverName;
 
-  tableDriver ? (tableDriverName = "senna") : (tableDriverName = "prost");
+  const [tableName, setTableName] = useState("prost");
 
   const API_URL = "https://6467aee160c8cb9a2c9a978a.mockapi.io/f1-flag";
   const ERGAST_URL = "http://ergast.com/api/f1/1989";
@@ -40,14 +39,14 @@ const MainPage = () => {
 
   useEffect(() => {
     axios
-      .get(`${ERGAST_URL}/drivers/${tableDriverName}/results.json`)
+      .get(`${ERGAST_URL}/drivers/${tableName}/results.json`)
       .then((response) => {
         setTableInfo(response.data.MRData.RaceTable.Races);
       });
-  }, [tableDriver, tableDriverName]);
+  }, [tableName]);
 
-  const onChangeHandle = () => {
-    setTableDriver((prevState) => !prevState);
+  const onChangeHandle = (e) => {
+    setTableName((prevValue) => (prevValue === "senna" ? "prost" : "senna"));
   };
 
   return (

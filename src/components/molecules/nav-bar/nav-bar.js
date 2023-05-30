@@ -1,24 +1,23 @@
-import { createContext, useState } from "react";
-
-import { NavBarEl } from "./nav-bar.styled";
 import NavLink from "../../atoms/nav-link/nav-link";
 import { BurgerMenu } from "../../atoms/burger-menu/burger-menu";
 
-export const NavContext = createContext();
+import NavProvider from "../../../context/nav-context";
+
+import { NavBarEl } from "./nav-bar.styled";
 
 const NavBar = () => {
-  const [navClass, setNavClass] = useState("");
+  // useContext
 
   return (
-    <NavContext.Provider value={{ navClass, setNavClass }}>
-      <NavBarEl className={navClass}>
+    <NavProvider>
+      <NavBarEl className={"navClass"}>
         <NavLink>The Car</NavLink>
         <NavLink>Alain Prost</NavLink>
         <NavLink>Ayrton Senna</NavLink>
         <NavLink>1989 Championship</NavLink>
       </NavBarEl>
       <BurgerMenu />
-    </NavContext.Provider>
+    </NavProvider>
   );
 };
 

@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
-import { NavContext } from "../../molecules/nav-bar/nav-bar";
+
+import { NavContext } from "../../../context/nav-context";
+
 import { Container } from "./burger-menu-styled";
 
 export const BurgerMenu = () => {

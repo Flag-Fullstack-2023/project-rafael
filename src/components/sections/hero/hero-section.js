@@ -1,13 +1,13 @@
 import React from "react";
-import Quote from "../molecules/quote/quote";
-import { Hero, HeroImg, HeroOverlay } from "./hero-section-styled";
+import Quote from "../../molecules/quote/quote";
+import { Hero, HeroImg, HeroOverlay } from "./hero-section.styled";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const HeroSection = () => {
   return (
     <Hero>
       <HeroImg
-        src={require("../../images/hero-img.jpg")}
+        src={require("../../../images/hero-img.jpg")}
         alt=""
         className="hero__img"
       />

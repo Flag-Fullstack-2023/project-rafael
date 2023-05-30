@@ -1,8 +1,9 @@
-import { GalleryEl } from "./gallery.styled";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+
+import { GalleryEl } from "./gallery.styled";
 
 const Gallery = ({ images, name }) => {
   return (
