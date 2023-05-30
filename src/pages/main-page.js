@@ -5,15 +5,11 @@ import axios from "axios";
 import Button from "../components/atoms/button/button";
 
 import { Table } from "../components/molecules";
-import { TableWrapper } from "../components/molecules/table/table-styled";
+import { TableWrapper } from "../components/molecules/table/table.styled";
 
-import {
-  HeroSection,
-  CarSection,
-  DriverSection,
-} from "../components/sections/";
+import { HeroSection, CarSection, DriverSection } from "../components/sections";
 import { Title } from "../components/atoms/section-title/section-title-styled";
-import { ChampionshipSection } from "../components/sections/championship-section-styled";
+import { ChampionshipSection } from "../components/sections/championship/championship-section.styled";
 
 import { theme } from "../theme";
 

@@ -9,8 +9,10 @@ import {
 } from "react-icons/bs";
 
 import Logo from "../../atoms/logo/logo";
+import { Input, Button } from "../../atoms/";
+import { Form } from "../../molecules/";
 
-import { FooterEl } from "./footer-styled";
+import { FooterEl } from "./footer.styled";
 
 const Footer = () => {
   return (
@@ -18,7 +20,7 @@ const Footer = () => {
       <div className="container-grid">
         <div className="logo-col">
           <Logo />
-          <p className="copyright">
+          <p className="copyright text_small">
             Copyright © <span className="year">2023</span> by Omnifood, Inc. All
             rights reserved.
           </p>
@@ -55,7 +57,18 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-        <div className="form-col"></div>
+        <div className="subscribe-col">
+          <Form onsubmit={(event) => event.preventDefault}>
+            <h4>Subscribe to the newsletter!</h4>
+            <Input
+              placeholder="address@example.com"
+              type="email"
+              name="email"
+              label="email"
+            />
+            <Button preset="secondary">Subscribe</Button>
+          </Form>
+        </div>
       </div>
     </FooterEl>
   );

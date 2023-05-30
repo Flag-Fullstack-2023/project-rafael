@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { HeaderEl } from "./header.styled.js";
-import NavBar from "../../molecules/nav-bar/nav-bar.js";
-import Logo from "../../atoms/logo/logo.js";
+import { HeaderEl } from "./header.styled";
+import NavBar from "../../molecules/nav-bar/nav-bar";
+import Logo from "../../atoms/logo/logo";
 
 const Header = () => {
   const [bgColor, setBgColor] = useState(false);
@@ -10,17 +10,8 @@ const Header = () => {
     window.scrollY >= 90 ? setBgColor(true) : setBgColor(false);
   };
 
-  window.addEventListener("scroll", changeBgColor);
-
-  // isto causa problemas
-  // porquê? :)
-
   useEffect(() => {
-    // adicionar listener
-
-    return () => {
-      // remover listener
-    };
+    window.addEventListener("scroll", changeBgColor);
   }, []);
 
   return (

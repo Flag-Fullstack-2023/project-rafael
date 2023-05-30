@@ -1,8 +1,8 @@
-import Section from "../organisms/section/section";
-import SectionTitle from "../atoms/section-title/section-title";
-import SectionText from "../atoms/section-text/section-text";
-import Gallery from "../molecules/gallery/gallery";
-import { SectionContent } from "./section-content.styled";
+import Section from "../../organisms/section/section";
+import SectionTitle from "../../atoms/section-title/section-title";
+import SectionText from "../../atoms/section-text/section-text";
+import Gallery from "../../molecules/gallery/gallery";
+import { SectionContent } from "../section-content.styled";
 
 const DriverSection = ({ name, bio, images }) => {
   let sectionPreset;

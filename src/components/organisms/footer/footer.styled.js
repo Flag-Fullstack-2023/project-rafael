@@ -7,6 +7,8 @@ export const FooterEl = styled.footer`
   min-height: 20rem;
   border-top: 1px solid ${theme.colors.marlboroRed};
   padding: 10rem 10rem;
+  display: flex;
+  justify-content: space-evenly;
 
   .container-grid {
     display: grid;
@@ -15,10 +17,13 @@ export const FooterEl = styled.footer`
   }
 
   .logo-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .social-col {
-    color: ${theme.colors.marlboroRed};
     display: flex;
     align-items: end;
     justify-content: space-evenly;
@@ -28,10 +33,10 @@ export const FooterEl = styled.footer`
     svg {
       width: 2.8rem;
       height: auto;
+      fill: ${theme.colors.marlboroRed};
     }
   }
 
-  .form-col {
-    background-color: aqua;
+  .subscribe-col {
   }
 `;

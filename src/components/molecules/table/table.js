@@ -1,8 +1,7 @@
 import React from "react";
-import { TableEl } from "./table-styled";
+import { TableEl } from "./table.styled";
 
 const Table = ({ info }) => {
-  console.log(info);
   return (
     <TableEl>
       <thead>

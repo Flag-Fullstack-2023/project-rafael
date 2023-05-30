@@ -12,6 +12,7 @@ export const ButtonEl = styled.button`
   text-align: center;
   transition: all ease-in-out 0.2s;
   margin: 4px;
+  font-size: 1.333rem;
 
   :hover {
     background-color: ${(props) => props.theme[props.preset].onHoverBackground};
