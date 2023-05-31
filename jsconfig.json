@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "_components/*": ["./src/components/*"],
+      "_atoms/*": ["./src/components/atoms/"],
+      "_molecules/*": ["./src/components/molecules/"],
+      "_organisms/*": ["./src/components/organisms/"],
+      "_sections/*": ["./src/components/sections/"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

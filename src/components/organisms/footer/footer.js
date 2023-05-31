@@ -21,8 +21,8 @@ const Footer = () => {
         <div className="logo-col">
           <Logo />
           <p className="copyright text_small">
-            Copyright © <span className="year">2023</span> by Omnifood, Inc. All
-            rights reserved.
+            Copyright © <span className="year">2023</span> by Rafael Logrado.
+            All rights reserved.
           </p>
         </div>
         <ul className="social-col">

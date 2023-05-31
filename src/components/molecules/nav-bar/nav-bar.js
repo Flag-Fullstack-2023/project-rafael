@@ -3,9 +3,7 @@ import NavLink from "../../atoms/nav-link/nav-link";
 import { BurgerMenu } from "../../atoms/burger-menu/burger-menu";
 import { NavContext } from "../../../context/nav-context";
 import { NavBarEl } from "./nav-bar.styled";
-
 const NavBar = () => {
-  //useContext
   const { navClass } = useContext(NavContext);
 
   return (
