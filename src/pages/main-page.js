@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import Toggle from "react-styled-toggle";
 import axios from "axios";
 
-import Button from "../components/atoms/button/button";
+import { Button } from "_atoms/";
 
-import { Table } from "../components/molecules";
-import { TableWrapper } from "../components/molecules/table/table.styled";
+import { Table } from "_molecules/";
+import { TableWrapper } from "_molecules/table/table.styled";
 
-import { HeroSection, CarSection, DriverSection } from "../components/sections";
-import { Title } from "../components/atoms/section-title/section-title-styled";
-import { ChampionshipSection } from "../components/sections/championship/championship-section.styled";
+import { HeroSection, CarSection, DriverSection } from "_sections/";
+import { Title } from "_atoms/section-title/section-title-styled";
+import { ChampionshipSection } from "_sections/championship/championship-section.styled";
 
 import { theme } from "../theme";
 
