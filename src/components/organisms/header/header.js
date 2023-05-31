@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HeaderEl } from "./header.styled";
-import NavBar from "../../molecules/nav-bar/nav-bar";
-import Logo from "../../atoms/logo/logo";
+import { Logo } from "_atoms/";
+import { NavBar } from "_molecules/";
 import NavProvider from "../../../context/nav-context";
 
 const Header = () => {

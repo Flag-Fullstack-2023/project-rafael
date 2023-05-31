@@ -7,10 +7,8 @@ import {
   BsFacebook,
   BsGithub,
 } from "react-icons/bs";
-
-import Logo from "../../atoms/logo/logo";
-import { Input, Button } from "../../atoms/";
-import { Form } from "../../molecules/";
+import { Logo, Input, Button } from "_atoms/";
+import { Form } from "_molecules/";
 
 import { FooterEl } from "./footer.styled";
 
