@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 import {
   BsLinkedin,
   BsTwitter,
@@ -17,7 +18,9 @@ const Footer = () => {
     <FooterEl>
       <div className="container-grid">
         <div className="logo-col">
-          <Logo />
+          <HashLink to="/#">
+            <Logo />
+          </HashLink>
           <p className="copyright text_small">
             Copyright © <span className="year">2023</span> by Rafael Logrado.
             All rights reserved.

@@ -3,7 +3,7 @@ import { LogoEl, LogoContainer } from "./logo-styled";
 
 const Logo = () => {
   return (
-    <LogoContainer href="#">
+    <LogoContainer>
       <img src="../../logo/logo-full.png" alt="F1-FLAG Logo" />
     </LogoContainer>
   );

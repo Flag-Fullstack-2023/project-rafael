@@ -3,7 +3,7 @@ import { HeaderEl } from "./header.styled";
 import { Logo } from "_atoms/";
 import { NavBar } from "_molecules/";
 import NavProvider from "../../../context/nav-context";
-
+import { HashLink } from "react-router-hash-link";
 const Header = () => {
   const [bgColor, setBgColor] = useState(false);
 
@@ -19,7 +19,9 @@ const Header = () => {
   return (
     <NavProvider>
       <HeaderEl className={bgColor ? "header_bg" : ""}>
-        <Logo />
+        <HashLink smooth to={"/#"}>
+          <Logo />
+        </HashLink>
         <NavBar />
       </HeaderEl>
     </NavProvider>

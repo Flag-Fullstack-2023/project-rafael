@@ -15,6 +15,36 @@ export const NavBarEl = styled.nav`
     gap: 2rem;
   }
 
+  a {
+    color: ${(props) => props.theme.colors.white};
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 1.777rem;
+
+    :after {
+      bottom: 0;
+      content: "";
+      height: 2px;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      width: 100%;
+      background-color: ${(props) => props.theme.colors.marlboroRed};
+      transform-origin: bottom right;
+      transition: transform ease-out 0.25s;
+    }
+
+    :hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    @media ${breakpoints.untilLaptop} {
+      font-size: 3.157rem;
+    }
+  }
+
   /**************************/
   /*      BELOW 1079px      */
   /**************************/
@@ -40,10 +70,6 @@ export const NavBarEl = styled.nav`
       pointer-events: auto;
       visibility: visible;
       transform: translateX(0);
-    }
-
-    a {
-      display: inline-block;
     }
 
     .burger_container {

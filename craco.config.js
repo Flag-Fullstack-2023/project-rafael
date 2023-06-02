@@ -1,10 +1,13 @@
-import { resolve } from "path";
+const path = require(`path`);
 
-export const webpack = {
-  alias: {
-    _atoms: resolve(__dirname, "src/components/atoms"),
-    _molecules: resolve(__dirname, "src/components/molecules"),
-    _organisms: resolve(__dirname, "src/components/organisms"),
-    _sections: resolve(__dirname, "src/components/sections"),
+module.exports = {
+  webpack: {
+    alias: {
+      _atoms: path.resolve(__dirname, "src/components/atoms"),
+      _molecules: path.resolve(__dirname, "src/components/molecules"),
+      _organisms: path.resolve(__dirname, "src/components/organisms"),
+      _sections: path.resolve(__dirname, "src/components/sections"),
+      _pages: path.resolve(__dirname, "src/pages"),
+    },
   },
 };
