@@ -14,8 +14,8 @@ const Table = ({ info }) => {
       </thead>
 
       <tbody>
-        {info.map((el) => (
-          <tr>
+        {info.map((el, index) => (
+          <tr key={index}>
             <td>
               {`${
                 el.Circuit.circuitId.charAt(0).toUpperCase() +

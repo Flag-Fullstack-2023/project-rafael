@@ -19,6 +19,11 @@ export const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
+  main{
+    margin: 0 auto;
+  width: 100vw;
+  }
+
   body {
     position: relative;
     overflow-x: hidden;
@@ -58,4 +63,7 @@ small, .text_small {font-size: 0.75rem;}
     list-style: none;
   }
     
+a, a:hover, a:active, a:link, a:visited{
+  text-decoration: none;
+}
 `;

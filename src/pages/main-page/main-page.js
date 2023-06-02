@@ -11,9 +11,8 @@ import { HeroSection, CarSection, DriverSection } from "_sections/";
 import { Title } from "_atoms/section-title/section-title-styled";
 import { ChampionshipSection } from "_sections/championship/championship-section.styled";
 
-import { theme } from "../theme";
-
-import { Main } from "./main-page.styled";
+import { theme } from "../../theme";
+import { Link } from "react-router-dom";
 
 const MainPage = () => {
   const [driverInfo, setDriverInfo] = useState({});
@@ -50,7 +49,7 @@ const MainPage = () => {
   };
 
   return (
-    <Main>
+    <React.Fragment>
       <HeroSection />
       {carInfo.length && (
         <CarSection
@@ -58,6 +57,7 @@ const MainPage = () => {
           name={carInfo[1].name}
           description={carInfo[2].description}
           key={carInfo[0].id}
+          id="CarSection"
         />
       )}
       {driverInfo.length &&
@@ -67,10 +67,11 @@ const MainPage = () => {
             bio={driver.bio}
             images={driver.images}
             key={driver.id}
+            id={driver.name.split(" ").join("")}
           />
         ))}
       {tableInfo.length && (
-        <ChampionshipSection preset="light">
+        <ChampionshipSection preset="light" id="Championship">
           <Title preset="light">1989 Championship</Title>
           <Toggle
             backgroundColorUnchecked={theme.colors.darkGrey}
@@ -82,10 +83,12 @@ const MainPage = () => {
           <TableWrapper>
             <Table info={tableInfo} />
           </TableWrapper>
-          <Button preset="primary">CHECK OTHER RESULTS</Button>
+          <Link to="/other-results">
+            <Button preset="primary">CHECK OTHER RESULTS</Button>
+          </Link>
         </ChampionshipSection>
       )}
-    </Main>
+    </React.Fragment>
   );
 };
 export default MainPage;

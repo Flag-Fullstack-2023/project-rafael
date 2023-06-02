@@ -4,7 +4,7 @@ import { Section } from "_organisms/";
 
 import { SectionContent } from "../section-content.styled";
 
-const DriverSection = ({ name, bio, images }) => {
+const DriverSection = ({ name, bio, images, id }) => {
   let sectionPreset;
 
   switch (name) {
@@ -20,7 +20,7 @@ const DriverSection = ({ name, bio, images }) => {
   }
 
   return (
-    <Section preset={sectionPreset}>
+    <Section preset={sectionPreset} id={id}>
       <SectionTitle preset={sectionPreset}>{name}</SectionTitle>
       <SectionContent preset={sectionPreset} name={name}>
         <Gallery images={images} name={name} />
