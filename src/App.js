@@ -6,9 +6,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { GlobalStyle } from "./utils/global";
-import MainPage from "./pages/main-page/main-page";
-import FormPage from "./pages/form-page/form-page";
-import RootLayout from "./layout/root-layout";
+import MainPage from "./_pages/main-page/main-page";
+import FormPage from "./_pages/form-page/form-page";
+import RootLayout from "./_layout/root-layout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

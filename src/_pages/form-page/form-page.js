@@ -6,7 +6,7 @@ import { Button } from "_atoms";
 
 import { FormWrapper } from "_sections/form-section-styled.js";
 
-import Table from "src/components/molecules/table/table";
+import Table from "_components/_molecules/table/table";
 // import { Table } from "_components/molecules";
 
 const FormPage = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HeaderEl } from "./header.styled";
-import { Logo } from "_atoms/";
-import { NavBar } from "_molecules/";
+import { Logo } from "_components/_atoms";
+import { NavBar } from "_components/_molecules";
 import NavProvider from "../../../context/nav-context";
 import { HashLink } from "react-router-hash-link";
 const Header = () => {

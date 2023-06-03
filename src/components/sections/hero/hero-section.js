@@ -1,5 +1,5 @@
 import React from "react";
-import { Quote } from "_molecules/";
+import { Quote } from "_components/_molecules";
 import { Hero, HeroImg, HeroOverlay } from "./hero-section.styled";
 import { MdKeyboardArrowDown } from "react-icons/md";
 

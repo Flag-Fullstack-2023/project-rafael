@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 
 import { NavContext } from "../../../context/nav-context";
 
-import { Container } from "./burger-menu-styled";
+import { Container } from "./burger-menu.styled";
 
 export const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);

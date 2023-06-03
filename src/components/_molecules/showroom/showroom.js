@@ -1,6 +1,6 @@
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import React from "react";
-import { Ground, Car } from "_atoms/";
+import { Ground, Car } from "_components/_atoms";
 
 const Showroom = () => {
   return (
