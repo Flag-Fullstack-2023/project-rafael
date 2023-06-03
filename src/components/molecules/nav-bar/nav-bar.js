@@ -1,8 +1,12 @@
 import { useContext } from "react";
-import { BurgerMenu } from "_components/atoms";
-import { NavContext } from "../../../context/nav-context";
-import { NavBarEl } from "./nav-bar.styled";
 import { HashLink } from "react-router-hash-link";
+
+import { BurgerMenu } from "_atoms";
+
+import { NavContext } from "_context/nav-context";
+
+import { NavBarEl } from "./nav-bar.styled";
+
 const NavBar = () => {
   const { navClass } = useContext(NavContext);
 

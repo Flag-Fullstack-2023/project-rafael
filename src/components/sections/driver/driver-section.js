@@ -1,6 +1,8 @@
-import { SectionText, SectionTitle } from "_components/atoms";
-import { Gallery } from "_components/molecules";
-import { Section } from "_components/organisms";
+import React from "react";
+
+import { SectionText, SectionTitle } from "_atoms";
+import { Gallery } from "_molecules";
+import { Section } from "_organisms";
 
 import { SectionContent } from "../section-content.styled";
 

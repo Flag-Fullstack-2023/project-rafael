@@ -2,16 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Toggle from "react-styled-toggle";
 import axios from "axios";
-import { theme } from "../../theme";
 
-import { Button } from "_components/atoms";
-import { Title } from "_components/atoms";
+import { Button, SectionTitle } from "_atoms";
+import { Table /* TableWrapper */ } from "_molecules";
+import { HeroSection, CarSection, DriverSection } from "_sections";
 
-import { Table } from "_components/molecules";
-import { TableWrapper } from "_components/molecules";
+import { theme } from "_theme/theme";
 
-import { HeroSection, CarSection, DriverSection } from "_sections/";
-import { ChampionshipSection } from "_sections/championship/championship-section.styled";
+// TODO
+import { ChampionshipSection } from "src/components/sections/championship/championship-section.styled";
 
 export const ERGAST_URL = "http://ergast.com/api/f1";
 
@@ -71,7 +70,7 @@ const MainPage = () => {
         ))}
       {tableInfo.length && (
         <ChampionshipSection preset="light" id="Championship">
-          <Title preset="light">1989 Championship</Title>
+          <SectionTitle preset="light">1989 Championship</SectionTitle>
           <Toggle
             backgroundColorUnchecked={theme.colors.darkGrey}
             backgroundColorChecked={theme.colors.darkGrey}
@@ -79,9 +78,7 @@ const MainPage = () => {
             labelRight="Ayrton Senna"
             onChange={onChangeHandle}
           />
-          <TableWrapper>
-            <Table preset="ProstVsSenna" info={tableInfo} />
-          </TableWrapper>
+          <Table preset="ProstVsSenna" info={tableInfo} />
           <Link to="/other-results">
             <Button preset="primary">CHECK OTHER RESULTS</Button>
           </Link>

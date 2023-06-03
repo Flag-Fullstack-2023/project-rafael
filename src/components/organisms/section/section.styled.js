@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../../../theme";
+import { theme } from "../../../theme/theme";
 
 export const SectionEl = styled.section`
   background-color: ${(props) => props.theme[props.preset].background};

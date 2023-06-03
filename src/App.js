@@ -5,14 +5,19 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
-import { GlobalStyle } from "./utils/global";
-import MainPage from "./pages/main-page/main-page";
-import FormPage from "./pages/form-page/form-page";
-import RootLayout from "./layout/root-layout";
+import { ThemeProvider } from "styled-components";
+
+import { Layout } from "_organisms";
+
+import { MainPage, FormPage } from "_pages";
+
+import { GlobalStyle } from "_utils/global";
+
+import { theme } from "_theme/theme";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+    <Route path="/" element={<Layout />}>
       <Route index element={<MainPage />} />
       <Route path="/other-results" element={<FormPage />} />
     </Route>
@@ -21,10 +26,10 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <RouterProvider router={router} />
-    </>
+    </ThemeProvider>
   );
 }
 
