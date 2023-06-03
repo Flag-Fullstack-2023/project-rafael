@@ -1,6 +1,23 @@
 import { createGlobalStyle } from "styled-components";
 import { toRem } from "./mixins";
+import { theme } from "../theme/theme";
 export const GlobalStyle = createGlobalStyle`
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
 *,
   *::before,
   *::after {
@@ -21,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
 
   main{
     margin: 0 auto;
-  width: 100vw;
+    width: 100vw;
   }
 
   body {
@@ -40,6 +57,17 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
     outline: none;
     background: none;
+  }
+
+  input {
+    outline: none;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    ::placeholder{
+      color: ${theme.colors.lightGrey};
+    }
   }
 
   p {margin-bottom: 1rem;}

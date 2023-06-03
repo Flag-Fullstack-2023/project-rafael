@@ -1,28 +1,26 @@
 import React, { useEffect, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { Link } from "react-router-dom";
 import Toggle from "react-styled-toggle";
 import axios from "axios";
 
-import { Button } from "_atoms/";
+import { Button } from "_atoms";
+import { Gallery, Showroom, Table } from "_molecules";
+import { Section, Hero } from "_organisms";
 
-import { Table } from "_molecules/";
-import { TableWrapper } from "_molecules/table/table.styled";
+import { theme } from "_theme/theme";
 
-import { HeroSection, CarSection, DriverSection } from "_sections/";
-import { Title } from "_atoms/section-title/section-title-styled";
-import { ChampionshipSection } from "_sections/championship/championship-section.styled";
+import { CarWrapper, TableWrapper } from "./main-page.styles";
 
-import { theme } from "../../theme";
-import { Link } from "react-router-dom";
+export const ERGAST_URL = "http://ergast.com/api/f1";
 
 const MainPage = () => {
   const [driverInfo, setDriverInfo] = useState({});
   const [carInfo, setCarInfo] = useState({});
   const [tableInfo, setTableInfo] = useState({});
-
   const [tableName, setTableName] = useState("prost");
 
   const API_URL = "https://6467aee160c8cb9a2c9a978a.mockapi.io/f1-flag";
-  const ERGAST_URL = "http://ergast.com/api/f1/1989";
 
   useEffect(() => {
     axios.get(`${API_URL}/drivers`).then((response) => {
@@ -38,7 +36,7 @@ const MainPage = () => {
 
   useEffect(() => {
     axios
-      .get(`${ERGAST_URL}/drivers/${tableName}/results.json`)
+      .get(`${ERGAST_URL}/1989/drivers/${tableName}/results.json`)
       .then((response) => {
         setTableInfo(response.data.MRData.RaceTable.Races);
       });
@@ -50,29 +48,52 @@ const MainPage = () => {
 
   return (
     <React.Fragment>
-      <HeroSection />
+      <Hero />
       {carInfo.length && (
-        <CarSection
-          preset="dark"
-          name={carInfo[1].name}
-          description={carInfo[2].description}
-          key={carInfo[0].id}
-          id="CarSection"
-        />
+        <Section
+          variant="dark"
+          preset="text-first"
+          id={carInfo[0].id}
+          title={carInfo[1].name}
+          text={carInfo[2].description}
+        >
+          <CarWrapper>
+            <Canvas shadows>
+              <Showroom />
+            </Canvas>
+          </CarWrapper>
+        </Section>
       )}
       {driverInfo.length &&
-        driverInfo.map((driver) => (
-          <DriverSection
-            name={driver.name}
-            bio={driver.bio}
-            images={driver.images}
-            key={driver.id}
-            id={driver.name.split(" ").join("")}
-          />
-        ))}
+        driverInfo.map((driver) => {
+          const { images, name, bio, id } = driver;
+
+          const options = {};
+
+          switch (name) {
+            case "Alain Prost":
+              options.variant = "light";
+              options.preset = "text-first";
+              break;
+            default:
+              options.variant = "dark";
+              options.preset = "text-second";
+              break;
+          }
+
+          return (
+            <Section {...options} id={id} title={name} text={bio}>
+              <Gallery images={images} name={name} />
+            </Section>
+          );
+        })}
       {tableInfo.length && (
-        <ChampionshipSection preset="light" id="Championship">
-          <Title preset="light">1989 Championship</Title>
+        <Section
+          variant="light"
+          preset="column"
+          id="Championship"
+          title="1989 Championship"
+        >
           <Toggle
             backgroundColorUnchecked={theme.colors.darkGrey}
             backgroundColorChecked={theme.colors.darkGrey}
@@ -81,12 +102,12 @@ const MainPage = () => {
             onChange={onChangeHandle}
           />
           <TableWrapper>
-            <Table info={tableInfo} />
+            <Table preset="ProstVsSenna" info={tableInfo} />
           </TableWrapper>
           <Link to="/other-results">
             <Button preset="primary">CHECK OTHER RESULTS</Button>
           </Link>
-        </ChampionshipSection>
+        </Section>
       )}
     </React.Fragment>
   );

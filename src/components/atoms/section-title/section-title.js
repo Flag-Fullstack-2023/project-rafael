@@ -1,9 +1,9 @@
 import React from "react";
-import { Title } from "./section-title-styled";
+import { Title } from "./section-title.styled";
 
 const SectionTitle = (props) => {
-  const { children, preset } = props;
-  return <Title preset={preset}>{children}</Title>;
+  const { children, variant } = props;
+  return <Title variant={variant}>{children}</Title>;
 };
 
 export default SectionTitle;

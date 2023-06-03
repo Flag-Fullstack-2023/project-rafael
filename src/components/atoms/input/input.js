@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { InputWrapper } from "./input.styled";
 
-const Input = ({ label, name, type, placeholder }) => {
+const InputEmail = ({ label, name, type, placeholder }) => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [error, setError] = useState(null);
 
@@ -34,4 +34,4 @@ const Input = ({ label, name, type, placeholder }) => {
   );
 };
 
-export default Input;
+export default InputEmail;

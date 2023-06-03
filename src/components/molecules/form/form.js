@@ -1,5 +1,5 @@
 import React from "react";
-import { FormEl } from "./form.style";
+import { FormEl } from "./form.styled";
 const Form = ({ children }) => {
   return <FormEl>{children}</FormEl>;
 };
