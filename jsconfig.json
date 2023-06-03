@@ -5,7 +5,6 @@
       "_atoms": ["src/components/atoms"],
       "_molecules": ["src/components/molecules"],
       "_organisms": ["src/components/organisms"],
-      "_sections": ["src/components/sections"],
       "_pages": ["src/pages"],
       "_utils/*": ["src/utils/*"],
       "_theme/*": ["src/theme/*"],

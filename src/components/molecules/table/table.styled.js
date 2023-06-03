@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../../theme/theme";
 
-export const TableWrapper = styled.article`
-  display: flex;
-  justify-content: center;
-`;
-
 export const TableEl = styled.table`
   width: 800px;
 
