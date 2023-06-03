@@ -12,6 +12,7 @@ const theme = {
     border: "none",
     cursor: "pointer",
     font: "1.8rem",
+    fontWeight: "700",
     onHoverBackground: "#f7b32b",
     padding: "1.2rem 2rem",
   },
@@ -20,6 +21,7 @@ const theme = {
     border: "2px solid #C60000",
     cursor: "pointer",
     font: "0.8rem",
+    fontWeight: "400",
     padding: "0.8rem 1.6rem",
     onHoverBackground: "#C60000",
   },
@@ -30,6 +32,14 @@ const theme = {
     font: "1.8rem",
     onHoverBackground: "",
     padding: "1.2rem 2rem",
+  },
+  dark: {
+    background: "#141414",
+    color: "#fff",
+  },
+  light: {
+    background: "#fff",
+    color: "#000",
   },
 };
 

@@ -15,9 +15,13 @@ export const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    background: ${(props) => props.theme.darkGrey};
     cursor: default;
     overflow-x: hidden;
+  }
+
+  main{
+    margin: 0 auto;
+  width: 100vw;
   }
 
   body {
@@ -35,6 +39,7 @@ export const GlobalStyle = createGlobalStyle`
   button {
     border: none;
     outline: none;
+    background: none;
   }
 
   p {margin-bottom: 1rem;}
@@ -58,4 +63,7 @@ small, .text_small {font-size: 0.75rem;}
     list-style: none;
   }
     
+a, a:hover, a:active, a:link, a:visited{
+  text-decoration: none;
+}
 `;
