@@ -4,11 +4,11 @@ import Toggle from "react-styled-toggle";
 import axios from "axios";
 import { theme } from "../../theme";
 
-import { Button } from "_components/_atoms";
-import { Title } from "_components/_atoms";
+import { Button } from "_components/atoms";
+import { Title } from "_components/atoms";
 
-import { Table } from "_components/_molecules";
-import { TableWrapper } from "_components/_molecules";
+import { Table } from "_components/molecules";
+import { TableWrapper } from "_components/molecules";
 
 import { HeroSection, CarSection, DriverSection } from "_sections/";
 import { ChampionshipSection } from "_sections/championship/championship-section.styled";

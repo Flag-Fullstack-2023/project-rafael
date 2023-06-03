@@ -1,8 +1,8 @@
 import { Canvas } from "@react-three/fiber";
 import React from "react";
-import { SectionTitle, SectionText } from "_components/_atoms";
-import { Showroom } from "_components/_molecules";
-import { Section } from "_components/_organisms";
+import { SectionTitle, SectionText } from "_components/atoms";
+import { Showroom } from "_components/molecules";
+import { Section } from "_components/organisms";
 import { SectionContent, CarWrapper } from "../section-content.styled";
 
 const CarSection = ({ preset, name, description, id }) => {

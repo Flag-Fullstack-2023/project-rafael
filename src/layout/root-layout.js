@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, Footer } from "_components/_organisms";
+import { Header, Footer } from "_components/organisms";
 import { Outlet } from "react-router-dom";
 
 const RootLayout = () => {
