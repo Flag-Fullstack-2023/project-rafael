@@ -7,6 +7,7 @@ export const ButtonEl = styled.button`
   cursor: ${(props) => props.theme[props.preset].cursor};
   font-size: ${(props) => props.theme[props.preset].font};
   font-weight: ${(props) => props.theme[props.preset].fontWeight};
+  text-transform: ${(props) => props.theme[props.preset].textTransform};
   padding: ${(props) => props.theme[props.preset].padding};
   border: ${(props) => props.theme[props.preset].border};
   text-align: center;

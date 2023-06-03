@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Toggle from "react-styled-toggle";
 import axios from "axios";
+import { theme } from "../../theme";
 
 import { Button } from "_atoms/";
+import { Title } from "_atoms/section-title/section-title-styled";
 
 import { Table } from "_molecules/";
 import { TableWrapper } from "_molecules/table/table.styled";
 
 import { HeroSection, CarSection, DriverSection } from "_sections/";
-import { Title } from "_atoms/section-title/section-title-styled";
 import { ChampionshipSection } from "_sections/championship/championship-section.styled";
 
-import { theme } from "../../theme";
-import { Link } from "react-router-dom";
+export const ERGAST_URL = "http://ergast.com/api/f1";
 
 const MainPage = () => {
   const [driverInfo, setDriverInfo] = useState({});
   const [carInfo, setCarInfo] = useState({});
   const [tableInfo, setTableInfo] = useState({});
-
   const [tableName, setTableName] = useState("prost");
 
   const API_URL = "https://6467aee160c8cb9a2c9a978a.mockapi.io/f1-flag";
-  const ERGAST_URL = "http://ergast.com/api/f1/1989";
 
   useEffect(() => {
     axios.get(`${API_URL}/drivers`).then((response) => {
@@ -38,7 +37,7 @@ const MainPage = () => {
 
   useEffect(() => {
     axios
-      .get(`${ERGAST_URL}/drivers/${tableName}/results.json`)
+      .get(`${ERGAST_URL}/1989/drivers/${tableName}/results.json`)
       .then((response) => {
         setTableInfo(response.data.MRData.RaceTable.Races);
       });
@@ -81,7 +80,7 @@ const MainPage = () => {
             onChange={onChangeHandle}
           />
           <TableWrapper>
-            <Table info={tableInfo} />
+            <Table preset="ProstVsSenna" info={tableInfo} />
           </TableWrapper>
           <Link to="/other-results">
             <Button preset="primary">CHECK OTHER RESULTS</Button>

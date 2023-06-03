@@ -8,7 +8,7 @@ import {
   BsFacebook,
   BsGithub,
 } from "react-icons/bs";
-import { Logo, Input, Button } from "_atoms/";
+import { Logo, InputEmail, Button } from "_atoms/";
 import { Form } from "_molecules/";
 
 import { FooterEl } from "./footer.styled";
@@ -61,7 +61,7 @@ const Footer = () => {
         <div className="subscribe-col">
           <Form onsubmit={(event) => event.preventDefault}>
             <h4>Subscribe to the newsletter!</h4>
-            <Input
+            <InputEmail
               placeholder="address@example.com"
               type="email"
               name="email"
