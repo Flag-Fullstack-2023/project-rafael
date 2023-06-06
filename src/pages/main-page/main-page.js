@@ -65,24 +65,24 @@ const MainPage = () => {
         </Section>
       )}
       {driverInfo.length &&
-        driverInfo.map((driver) => {
-          const { images, name, bio, id } = driver;
+        driverInfo.map((driver, index) => {
+          const { images, name, bio } = driver;
 
           const options = {};
 
           switch (name) {
             case "Alain Prost":
               options.variant = "light";
-              options.preset = "text-first";
+              options.preset = "text-second";
               break;
             default:
               options.variant = "dark";
-              options.preset = "text-second";
+              options.preset = "text-first";
               break;
           }
 
           return (
-            <Section {...options} id={id} title={name} text={bio}>
+            <Section {...options} id={name} title={name} text={bio} key={index}>
               <Gallery images={images} name={name} />
             </Section>
           );

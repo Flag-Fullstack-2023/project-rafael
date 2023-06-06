@@ -13,13 +13,13 @@ const NavBar = () => {
   return (
     <>
       <NavBarEl className={navClass}>
-        <HashLink smooth to="/#CarSection">
+        <HashLink smooth to="/#1">
           The Car
         </HashLink>
-        <HashLink smooth to="/#AlainProst">
+        <HashLink smooth to="/#Alain Prost">
           Alain Prost
         </HashLink>
-        <HashLink smooth to="/#AyrtonSenna">
+        <HashLink smooth to="/#Ayrton Senna">
           Ayrton Senna
         </HashLink>
         <HashLink smooth to="/#Championship">

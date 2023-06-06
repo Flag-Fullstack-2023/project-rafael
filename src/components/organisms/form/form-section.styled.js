@@ -1,19 +1,18 @@
-import { theme } from "src/theme/theme";
 import styled from "styled-components";
+import { theme } from "_theme/theme";
 
-export const FormWrapper = styled.section`
+export const Article = styled.article`
   background-color: ${theme.colors.darkGrey};
   color: ${theme.colors.white};
   padding: 10rem 0 20rem;
   display: grid;
   align-content: center;
   justify-content: center;
-  height: 100vh;
 
   form {
     display: flex;
     flex-direction: column;
-    width: 80rem;
+    width: 90rem;
     border-radius: 1rem;
     background-color: ${theme.colors.jetGrey};
     padding: 4rem 0;
@@ -28,6 +27,18 @@ export const FormWrapper = styled.section`
 
     .form-action {
       margin: 0 auto;
+    }
+
+    select {
+      outline: none;
+      border: none;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      width: 100%;
+
+      &:invalid {
+        color: ${theme.colors.lightGrey};
+      }
     }
   }
 `;
