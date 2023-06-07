@@ -45,10 +45,6 @@ export const NavBarEl = styled.nav`
     }
   }
 
-  /**************************/
-  /*      BELOW 1079px      */
-  /**************************/
-
   @media ${breakpoints.untilLaptop} {
     background-color: rgba(0, 0, 0, 0.97);
     flex-direction: column;

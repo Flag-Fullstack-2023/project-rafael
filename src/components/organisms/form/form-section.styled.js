@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "_theme/theme";
+import { breakpoints } from "../../../utils/breakpoints";
 
 export const Article = styled.article`
   background-color: ${theme.colors.darkGrey};
@@ -36,10 +37,11 @@ export const Article = styled.article`
       padding: 1rem;
       border-radius: 0.5rem;
       width: 100%;
+    }
 
-      &:invalid {
-        color: ${theme.colors.lightGrey};
-      }
+    & > p {
+      color: ${theme.colors.marlboroRed};
+      margin: 0 auto;
     }
 
     .loading {
@@ -66,6 +68,24 @@ export const Article = styled.article`
             transform: rotate(359deg);
           }
         }
+      }
+    }
+  }
+
+  @media ${breakpoints.forBigMobile} {
+    width: calc(100vw- 1rem);
+
+    form {
+      margin: 0 auto;
+      width: calc(100% - 1rem);
+      padding: 2rem 1rem;
+
+      .form-inputs {
+        width: calc(100% - 1rem);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1 rem;
+        gap: 2rem;
       }
     }
   }

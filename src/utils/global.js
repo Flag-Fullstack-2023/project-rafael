@@ -25,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
   main{
     margin: 0 auto;
     width: 100vw;
+    min-height: calc(100vh - 20rem);
     background-color: ${theme.colors.darkGrey};
   }
 

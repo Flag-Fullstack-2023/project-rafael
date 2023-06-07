@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { theme } from "../../../theme/theme";
+import { breakpoints } from "../../../utils/breakpoints";
 
 export const TableEl = styled.table`
   width: 800px;
@@ -32,6 +33,19 @@ export const TableEl = styled.table`
     td {
       padding: 1rem;
       min-width: 100px;
+    }
+  }
+
+  @media ${breakpoints.forBigMobile} {
+    width: calc(100vw - 1rem);
+
+    .head__row_date,
+    .body__row_date,
+    .head__row_team,
+    .body__row_team,
+    .head__row_status,
+    .body__row_status {
+      display: none;
     }
   }
 `;

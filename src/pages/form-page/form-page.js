@@ -20,6 +20,12 @@ const FormPage = () => {
   const [enteredLocation, setEnteredLocation] = useState("");
   const [enteredYear, setEnteredYear] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [noData, setNoData] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const yearChangeHandler = (event) => {
     setEnteredYear(event.target.value);
@@ -44,6 +50,14 @@ const FormPage = () => {
       .then((response) => {
         setRaceInfo(response.data);
         setLoading(false);
+        response.data.MRData.RaceTable.Races.length > 0
+          ? setNoData(false)
+          : setNoData(true);
+      })
+      .catch((err) => {
+        setLoading(false);
+        setError(true);
+        console.log(err);
       });
   };
 
@@ -89,12 +103,14 @@ const FormPage = () => {
             Check Results
           </Button>
         </div>
+        {error && <p>Sorry, there was an error, try again?</p>}
+        {noData && <p>Sorry, there was no data, try again?</p>}
         {loading && (
           <div className="loading">
             <AiOutlineLoading />
           </div>
         )}
-        {Object.keys(raceInfo).length > 0 && (
+        {!noData && Object.keys(raceInfo).length > 0 && (
           <Table preset="other" info={raceInfo.MRData.RaceTable.Races} />
         )}
       </form>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../../../utils/breakpoints";
 
 export const SectionEl = styled.section`
   background-color: ${(props) => props.theme[props.variant].background};
@@ -7,6 +8,10 @@ export const SectionEl = styled.section`
   display: grid;
   align-content: center;
   justify-content: center;
+
+  @media ${breakpoints.forBigMobile} {
+    padding-bottom: 10rem;
+  }
 `;
 
 export const SectionContent = styled.article`
@@ -28,5 +33,13 @@ export const SectionContent = styled.article`
 
   a {
     width: fit-content;
+  }
+
+  @media ${breakpoints.forBigMobile} {
+    flex-direction: column;
+
+    > div {
+      width: calc(100vw - 1rem);
+    }
   }
 `;
