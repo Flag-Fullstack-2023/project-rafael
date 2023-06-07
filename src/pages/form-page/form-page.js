@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { AiOutlineLoading } from "react-icons/ai";
 import { ERGAST_URL } from "_pages/main-page/main-page";
 
 import { Button } from "_atoms";
@@ -18,6 +19,7 @@ const FormPage = () => {
   const [availableCircuits, setAvailableCircuits] = useState({});
   const [enteredLocation, setEnteredLocation] = useState("");
   const [enteredYear, setEnteredYear] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const yearChangeHandler = (event) => {
     setEnteredYear(event.target.value);
@@ -34,12 +36,14 @@ const FormPage = () => {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
+    setLoading(true);
     axios
       .get(
         `${ERGAST_URL}/${enteredYear}/circuits/${enteredLocation}/results.json`
       )
       .then((response) => {
         setRaceInfo(response.data);
+        setLoading(false);
       });
   };
 
@@ -85,6 +89,11 @@ const FormPage = () => {
             Check Results
           </Button>
         </div>
+        {loading && (
+          <div className="loading">
+            <AiOutlineLoading />
+          </div>
+        )}
         {Object.keys(raceInfo).length > 0 && (
           <Table preset="other" info={raceInfo.MRData.RaceTable.Races} />
         )}

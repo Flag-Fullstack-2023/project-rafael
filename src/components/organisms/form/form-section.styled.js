@@ -17,6 +17,7 @@ export const Article = styled.article`
     background-color: ${theme.colors.jetGrey};
     padding: 4rem 0;
     gap: 4rem;
+    position: relative;
 
     .form-inputs {
       display: flex;
@@ -38,6 +39,33 @@ export const Article = styled.article`
 
       &:invalid {
         color: ${theme.colors.lightGrey};
+      }
+    }
+
+    .loading {
+      width: 100%;
+      height: 100%;
+      background-color: ${theme.colors.black};
+      opacity: 50%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      margin: -4rem 0;
+
+      svg {
+        font-size: 6rem;
+        animation: rotation 0.4s infinite linear;
+
+        @keyframes rotation {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(359deg);
+          }
+        }
       }
     }
   }

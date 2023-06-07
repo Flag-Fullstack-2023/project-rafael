@@ -3,6 +3,7 @@ import { TableEl } from "./table.styled";
 
 const Table = ({ preset, info }) => {
   const raceResults = info[0].Results;
+  console.log(raceResults);
 
   return (
     <TableEl preset={preset}>
@@ -37,7 +38,9 @@ const Table = ({ preset, info }) => {
           raceResults.map((el, index) => (
             <tr key={index}>
               <td className="position">{el.position}</td>
-              <td className="name">{el.Driver.code}</td>
+              <td className="name">
+                {el.Driver.givenName} {el.Driver.familyName}
+              </td>
               <td className="constructor">{el.Constructor.name}</td>
               <td className="status">{el.status}</td>
               <td className="points">{el.points}</td>
