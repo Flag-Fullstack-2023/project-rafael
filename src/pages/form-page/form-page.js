@@ -4,7 +4,7 @@ import { ERGAST_URL } from "_pages/main-page/main-page";
 
 import { Button } from "_atoms";
 import { Table } from "_molecules";
-import { Article } from "_organisms/form/form-section.styled.js";
+import { FormSection } from "_organisms";
 import axios from "axios";
 
 const years = [];
@@ -62,65 +62,63 @@ const FormPage = () => {
   };
 
   return (
-    <Article>
-      <form onSubmit={onSubmitHandler}>
-        <div className="form-inputs">
-          <div>
-            <label htmlFor="year-select">Year</label>
-            <select
-              required
-              id="year-select"
-              defaultValue=""
-              onChange={yearChangeHandler}
-            >
-              <option value="" disabled hidden>
-                Select year...
+    <FormSection onSubmitForm={onSubmitHandler}>
+      <div className="form-inputs">
+        <div>
+          <label htmlFor="year-select">Year</label>
+          <select
+            required
+            id="year-select"
+            defaultValue=""
+            onChange={yearChangeHandler}
+          >
+            <option value="" disabled hidden>
+              Select year...
+            </option>
+            {years.map((year, index) => (
+              <option value={year} key={index}>
+                {year}
               </option>
-              {years.map((year, index) => (
-                <option value={year} key={index}>
-                  {year}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label htmlFor="location-select">Gran Prix Location</label>
-            <select
-              required
-              name="locations"
-              id="location-select"
-              defaultValue=""
-              onChange={locationChangeHandler}
-            >
-              <option value="" disabled hidden>
-                Select location...
-              </option>
-              {Object.keys(availableCircuits).length &&
-                availableCircuits.MRData.CircuitTable.Circuits.map(
-                  (item, index) => (
-                    <option value={item.circuitId} key={index}>
-                      {item.circuitName}
-                    </option>
-                  )
-                )}
-            </select>
-          </div>
-          <Button preset="primary" type="submit">
-            Check Results
-          </Button>
+            ))}
+          </select>
         </div>
-        {error && <p>Sorry, there was an error, try again?</p>}
-        {noData && <p>Sorry, there was no data, try again?</p>}
-        {loading && (
-          <div className="loading">
-            <AiOutlineLoading />
-          </div>
-        )}
-        {!noData && Object.keys(raceInfo).length > 0 && (
-          <Table preset="other" info={raceInfo.MRData.RaceTable.Races} />
-        )}
-      </form>
-    </Article>
+        <div>
+          <label htmlFor="location-select">Gran Prix Location</label>
+          <select
+            required
+            name="locations"
+            id="location-select"
+            defaultValue=""
+            onChange={locationChangeHandler}
+          >
+            <option value="" disabled hidden>
+              Select location...
+            </option>
+            {Object.keys(availableCircuits).length &&
+              availableCircuits.MRData.CircuitTable.Circuits.map(
+                (item, index) => (
+                  <option value={item.circuitId} key={index}>
+                    {item.circuitName}
+                  </option>
+                )
+              )}
+          </select>
+        </div>
+        <Button preset="primary" type="submit">
+          Check Results
+        </Button>
+      </div>
+      {error && <p>Sorry, there was an error, try again?</p>}
+      {noData && <p>Sorry, there was no data, try again?</p>}
+      {loading && (
+        <div className="loading">
+          <AiOutlineLoading />
+        </div>
+      )}
+      {!noData && Object.keys(raceInfo).length > 0 && (
+        <Table preset="other" info={raceInfo.MRData.RaceTable.Races} />
+      )}
+    </FormSection>
   );
 };
 
