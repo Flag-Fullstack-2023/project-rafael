@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { breakpoints } from "../../../utils/breakpoints";
 
-export const Container = styled.div`
+export const Container = styled.button`
   display: none;
+
   @media ${breakpoints.untilLaptop} {
     display: flex;
     justify-content: flex-end;

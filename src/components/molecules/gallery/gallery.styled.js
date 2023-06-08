@@ -3,8 +3,9 @@ import { breakpoints } from "../../../utils/breakpoints";
 
 export const GalleryEl = styled.div`
   height: 100%;
+
   .swiper {
-    max-width: 700px;
+    /* max-width: 700px; */
     aspect-ratio: 3/2;
     object-fit: cover;
 

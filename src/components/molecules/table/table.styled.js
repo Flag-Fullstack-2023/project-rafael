@@ -3,9 +3,19 @@ import { theme } from "../../../theme/theme";
 import { breakpoints } from "../../../utils/breakpoints";
 
 export const TableEl = styled.table`
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
   border-collapse: collapse;
+  width: calc(100vw - 1rem);
+
+  .head__row_date,
+  .head__row_team,
+  .head__row_status,
+  .body__row_date,
+  .body__row_team,
+  .body__row_status {
+    display: none;
+  }
 
   thead {
     font-size: 1.777rem;
@@ -36,16 +46,19 @@ export const TableEl = styled.table`
     }
   }
 
-  @media ${breakpoints.forBigMobile} {
-    width: calc(100vw - 1rem);
-
+  @media ${breakpoints.forTablet} {
     .head__row_date,
-    .body__row_date,
     .head__row_team,
-    .body__row_team,
+    .body__row_date,
+    .body__row_team {
+      display: table-cell;
+    }
+  }
+
+  @media ${breakpoints.forLaptop} {
     .head__row_status,
     .body__row_status {
-      display: none;
+      display: table-cell;
     }
   }
 `;

@@ -16,16 +16,13 @@ export const SectionEl = styled.section`
 
 export const SectionContent = styled.article`
   display: flex;
-  flex-direction: ${({ preset }) => {
-    switch (preset) {
-      case "text-first":
-        return "row-reverse";
-      case "column":
-        return "column";
-      default:
-        return "row";
-    }
-  }};
+  flex-direction: column;
+
+  > div {
+    width: calc(100vw - 1rem);
+    max-height: 200rem;
+  }
+
   gap: 6rem;
   padding: 0 10rem;
   max-width: 1920px;
@@ -35,11 +32,28 @@ export const SectionContent = styled.article`
     width: fit-content;
   }
 
-  @media ${breakpoints.forBigMobile} {
-    flex-direction: column;
+  @media ${breakpoints.forLaptop} {
+    max-width: calc(100vw - 1rem);
+    flex-direction: ${({ preset }) => {
+      switch (preset) {
+        case "text-first":
+          return "row-reverse";
+        case "column":
+          return "column";
+        default:
+          return "row";
+      }
+    }};
 
     > div {
-      width: calc(100vw - 1rem);
+      max-width: 50%;
+      height: 100%;
+    }
+  }
+
+  @media ${breakpoints.forDesktop} {
+    > div {
+      max-width: 70rem;
     }
   }
 `;

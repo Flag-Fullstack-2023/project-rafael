@@ -67,8 +67,13 @@ const FormPage = () => {
         <div className="form-inputs">
           <div>
             <label htmlFor="year-select">Year</label>
-            <select required id="year-select" onChange={yearChangeHandler}>
-              <option value="" disabled selected hidden>
+            <select
+              required
+              id="year-select"
+              defaultValue=""
+              onChange={yearChangeHandler}
+            >
+              <option value="" disabled hidden>
                 Select year...
               </option>
               {years.map((year, index) => (
@@ -84,9 +89,10 @@ const FormPage = () => {
               required
               name="locations"
               id="location-select"
+              defaultValue=""
               onChange={locationChangeHandler}
             >
-              <option value="" disabled selected hidden>
+              <option value="" disabled hidden>
                 Select location...
               </option>
               {Object.keys(availableCircuits).length &&

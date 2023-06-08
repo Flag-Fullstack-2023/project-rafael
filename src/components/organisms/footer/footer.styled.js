@@ -13,16 +13,22 @@ export const FooterEl = styled.footer`
 
   .container-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20rem;
+    width: 100vw;
+    grid-template-columns: 1fr;
+    gap: 10rem;
+    justify-items: center;
 
-    @media ${breakpoints.forBigMobile} {
-      width: 100vw;
-      grid-template-columns: 1fr;
-      gap: 10rem;
+    .social-col {
+      gap: 8rem;
+    }
+
+    @media ${breakpoints.forLaptop} {
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+      gap: 20rem;
 
       .social-col {
-        gap: 8rem;
+        gap: 5rem;
       }
     }
   }

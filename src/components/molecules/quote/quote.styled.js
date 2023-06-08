@@ -14,7 +14,7 @@ export const QuoteEl = styled.div`
   max-height: 70vh;
 
   .quote__text {
-    font-size: 7rem;
+    font-size: 4rem;
     font-weight: 600;
   }
   .quote__author {
@@ -23,26 +23,20 @@ export const QuoteEl = styled.div`
   }
 
   @media ${breakpoints.forBigTablet} {
+    .quote__text {
+      font-size: 4.5rem;
+    }
+  }
+
+  @media ${breakpoints.forBigTablet} {
     .quote__author {
       right: 10%;
     }
   }
 
-  @media (max-width: 526px) {
+  @media ${breakpoints.forLaptop} {
     .quote__text {
-      font-size: 5rem;
-    }
-  }
-
-  @media ${breakpoints.forBigMobile} {
-    .quote__text {
-      font-size: 4.5rem;
-    }
-  }
-  @media (max-width: 375px) {
-    .quote__text {
-      /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
-      font-size: 4.5rem;
+      font-size: 7rem;
     }
   }
 `;

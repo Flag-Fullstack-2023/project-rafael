@@ -13,22 +13,19 @@ export const Article = styled.article`
   form {
     display: flex;
     flex-direction: column;
-    width: 90rem;
     border-radius: 1rem;
     background-color: ${theme.colors.jetGrey};
-    padding: 4rem 0;
-    gap: 4rem;
     position: relative;
+    align-items: center;
 
     .form-inputs {
       display: flex;
-      align-items: end;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 30rem;
       flex-wrap: wrap;
-      justify-content: space-evenly;
-    }
-
-    .form-action {
-      margin: 0 auto;
+      padding: 1rem;
+      align-items: stretch;
     }
 
     select {
@@ -86,6 +83,21 @@ export const Article = styled.article`
         align-items: stretch;
         padding: 1 rem;
         gap: 2rem;
+      }
+    }
+  }
+
+  @media ${breakpoints.forLaptop} {
+    form {
+      width: 90rem;
+      padding: 4rem 0;
+      gap: 4rem;
+
+      .form-inputs {
+        max-width: 100%;
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-evenly;
       }
     }
   }
