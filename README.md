@@ -4,10 +4,10 @@ This is a two page website about the peak of the rivalry between two legendary F
 
 ## Contents
 
-- [Screenshots] (#Screenshots)
-- [Usage] (#Usage)
-- [Features] (#Features)
-- [Technologies Used] (#Technologies-Used)
+- [Screenshots](#Screenshots)
+- [Usage](#Usage)
+- [Features](#Features)
+- [Technologies Used](#Technologies-Used)
 
 ## Screenshots
 
