@@ -26,7 +26,9 @@ const Section = (props) => {
       <SectionTitle variant={variant}>{title}</SectionTitle>
       <SectionContent preset={preset}>
         {children}
-        <SectionText variant={variant}>{text}</SectionText>
+        {preset !== "column" && (
+          <SectionText variant={variant}>{text}</SectionText>
+        )}
       </SectionContent>
     </SectionEl>
   );

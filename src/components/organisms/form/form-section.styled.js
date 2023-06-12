@@ -1,33 +1,104 @@
-import { theme } from "src/theme/theme";
 import styled from "styled-components";
+import { theme } from "_theme/theme";
+import { breakpoints } from "../../../utils/breakpoints";
 
-export const FormWrapper = styled.section`
+export const Article = styled.article`
   background-color: ${theme.colors.darkGrey};
   color: ${theme.colors.white};
   padding: 10rem 0 20rem;
   display: grid;
   align-content: center;
   justify-content: center;
-  height: 100vh;
 
   form {
     display: flex;
     flex-direction: column;
-    width: 80rem;
     border-radius: 1rem;
     background-color: ${theme.colors.jetGrey};
-    padding: 4rem 0;
-    gap: 4rem;
+    position: relative;
+    align-items: center;
 
     .form-inputs {
       display: flex;
-      align-items: end;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 30rem;
       flex-wrap: wrap;
-      justify-content: space-evenly;
+      padding: 1rem;
+      align-items: stretch;
     }
 
-    .form-action {
+    select {
+      outline: none;
+      border: none;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    & > p {
+      color: ${theme.colors.marlboroRed};
       margin: 0 auto;
+    }
+
+    .loading {
+      width: 100%;
+      height: 100%;
+      background-color: ${theme.colors.black};
+      opacity: 50%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1rem;
+      margin: -4rem 0;
+
+      svg {
+        font-size: 6rem;
+        animation: rotation 0.4s infinite linear;
+
+        @keyframes rotation {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(359deg);
+          }
+        }
+      }
+    }
+  }
+
+  @media ${breakpoints.forBigMobile} {
+    width: calc(100vw- 1rem);
+
+    form {
+      margin: 0 auto;
+      width: calc(100% - 1rem);
+      padding: 2rem 1rem;
+
+      .form-inputs {
+        width: calc(100% - 1rem);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1 rem;
+        gap: 2rem;
+      }
+    }
+  }
+
+  @media ${breakpoints.forLaptop} {
+    form {
+      width: 90rem;
+      padding: 4rem 0;
+      gap: 4rem;
+
+      .form-inputs {
+        max-width: 100%;
+        flex-direction: row;
+        align-items: end;
+        justify-content: space-evenly;
+      }
     }
   }
 `;

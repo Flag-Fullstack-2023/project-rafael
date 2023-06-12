@@ -3,20 +3,6 @@ import { toRem } from "./mixins";
 import { theme } from "../theme/theme";
 export const GlobalStyle = createGlobalStyle`
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 
 *,
   *::before,
@@ -39,11 +25,12 @@ code {
   main{
     margin: 0 auto;
     width: 100vw;
+    min-height: calc(100vh - 20rem);
+    background-color: ${theme.colors.darkGrey};
   }
 
   body {
     position: relative;
-    overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: ${toRem(16)};

@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 import { Quote } from "_molecules";
@@ -14,7 +15,9 @@ const HeroSection = () => {
         className="hero__img"
       />
       <HeroOverlay>
-        <MdKeyboardArrowDown />
+        <HashLink smooth to="/#1">
+          <MdKeyboardArrowDown />
+        </HashLink>
       </HeroOverlay>
       <Quote />
     </Hero>

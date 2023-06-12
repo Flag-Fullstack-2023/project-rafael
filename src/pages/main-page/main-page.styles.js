@@ -1,8 +1,14 @@
+import { breakpoints } from "_utils/breakpoints";
 import styled from "styled-components";
 
 export const CarWrapper = styled.div`
-  width: 700px;
   aspect-ratio: 3/2;
+
+  @media ${breakpoints.forTablet} {
+    aspect-ratio: auto;
+    min-height: 30rem;
+    max-height: 40rem;
+  }
 `;
 
 export const TableWrapper = styled.article`

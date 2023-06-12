@@ -1,23 +1,11 @@
-import React, { useContext, useState } from "react";
-
-import { NavContext } from "../../../context/nav-context";
+import React from "react";
 
 import { Container } from "./burger-menu.styled";
 
-export const BurgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const NavBarContext = useContext(NavContext);
-
-  const onClickHandler = () => {
-    NavBarContext.navClass === ""
-      ? NavBarContext.setNavClass("nav_open")
-      : NavBarContext.setNavClass("");
-    setIsOpen(!isOpen);
-  };
-
+export const BurgerMenu = ({ clicked, openMenu }) => {
   return (
-    <Container className="burger_container" onClick={onClickHandler}>
-      <div className={`menu_icon ${isOpen ? "clicked" : ""}`}>
+    <Container className="burger_container" onClick={openMenu}>
+      <div className={`menu_icon ${clicked ? "clicked" : ""}`}>
         <span className="one"></span>
         <span className="two"></span>
         <span className="three"></span>
