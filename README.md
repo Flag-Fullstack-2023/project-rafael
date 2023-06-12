@@ -4,16 +4,18 @@ This is a two page website about the peak of the rivalry between two legendary F
 
 ## Contents
 
-- [Screenshots] (#Screenshots)
-- [Usage] (#Usage)
-- [Features] (#Features)
-- [Technologies Used] (#Technologies-Used)
+- [Screenshots](#Screenshots)
+- [Usage](#Usage)
+- [Features](#Features)
+- [Technologies Used](#Technologies-Used)
 
 ## Screenshots
 
-<img src="" alt="" width="600px">
-<img src="" alt="" width="600px">
-<img src="" alt="" width="600px">
+<img src="/src/preview/preview-home.jpeg" alt="" width="600px">
+
+<img src="/src/preview/preview-form.jpeg" alt="" width="600px">
+
+<img src="/src/preview/preview-form-2.png" alt="" width="600px">
 
 ## Usage
 
@@ -21,7 +23,7 @@ The website consists of two pages: the home page and the form page.
 
 <b>Home Page</b>
 
-- The home page seves as the main entry point to the F1 FLAG website. It provides the information about the car and drivers, showcasing an interactive model of the former and galleries of the respective drivers, and includes navigation links to each section of the website.
+- The home page serves as the main entry point to the F1 FLAG website. It provides the information about the car and drivers, showcasing an interactive model of the former and galleries of the respective drivers, and includes navigation links to each section of the website.
 
 <b>Form Page</b>
 
@@ -31,11 +33,11 @@ The website consists of two pages: the home page and the form page.
 
 - View the optimal layout for each section on their devices's screen size
 - See hover stater for interactive elements throughtout the site
-- Use interactive 3D Model to explore the car and it's in intricacies
+- Use interactive 3D Model to explore the car and it's intricacies
 
 ## Technologies Used
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-[label](https://github.com/Flag-Fullstack-2023/project-rafael/pulls)
+![ReactJS](https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge)
