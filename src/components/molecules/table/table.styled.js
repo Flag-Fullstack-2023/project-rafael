@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { theme } from "../../../theme/theme";
-import { breakpoints } from "../../../utils/breakpoints";
+import { theme } from "_theme/theme";
+import { breakpoints } from "_utils/breakpoints";
 
 export const TableEl = styled.table`
   max-width: 800px;

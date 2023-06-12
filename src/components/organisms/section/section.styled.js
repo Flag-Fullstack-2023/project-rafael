@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "../../../utils/breakpoints";
+import { breakpoints } from "_utils/breakpoints";
 
 export const SectionEl = styled.section`
   background-color: ${(props) => props.theme[props.variant].background};

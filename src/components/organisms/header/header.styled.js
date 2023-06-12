@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../../../theme/theme";
+import { theme } from "_theme/theme";
 
 export const HeaderEl = styled.header`
   display: grid;

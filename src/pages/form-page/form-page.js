@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { AiOutlineLoading } from "react-icons/ai";
-import { ERGAST_URL } from "_pages/main-page/main-page";
+import { ERGAST_URL } from "_api/api";
 
 import { Button } from "_atoms";
 import { Table } from "_molecules";
