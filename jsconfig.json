@@ -2,13 +2,14 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "_api/*": ["src/api/*"],
       "_atoms": ["src/components/atoms"],
+      "_context/*": ["src/context/*"],
       "_molecules": ["src/components/molecules"],
       "_organisms": ["src/components/organisms"],
       "_pages": ["src/pages"],
-      "_utils/*": ["src/utils/*"],
       "_theme/*": ["src/theme/*"],
-      "_context/*": ["src/context/*"]
+      "_utils/*": ["src/utils/*"]
     }
   },
   "include": ["src/**/*"],

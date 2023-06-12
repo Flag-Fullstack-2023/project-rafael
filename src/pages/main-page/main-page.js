@@ -12,7 +12,7 @@ import { theme } from "_theme/theme";
 
 import { CarWrapper, TableWrapper } from "./main-page.styles";
 
-export const ERGAST_URL = "http://ergast.com/api/f1";
+import { ERGAST_URL, F1_FLAG_URL } from "_api/api";
 
 const MainPage = () => {
   const [driverInfo, setDriverInfo] = useState({});
@@ -20,16 +20,14 @@ const MainPage = () => {
   const [tableInfo, setTableInfo] = useState({});
   const [tableName, setTableName] = useState("prost");
 
-  const API_URL = "https://6467aee160c8cb9a2c9a978a.mockapi.io/f1-flag";
-
   useEffect(() => {
-    axios.get(`${API_URL}/drivers`).then((response) => {
+    axios.get(`${F1_FLAG_URL}/drivers`).then((response) => {
       setDriverInfo(response.data);
     });
   }, [setDriverInfo]);
 
   useEffect(() => {
-    axios.get(`${API_URL}/car`).then((response) => {
+    axios.get(`${F1_FLAG_URL}/car`).then((response) => {
       setCarInfo(response.data);
     });
   }, [setCarInfo]);

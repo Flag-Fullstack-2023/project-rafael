@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "../../../utils/breakpoints";
+import { breakpoints } from "_utils/breakpoints";
 
 export const GalleryEl = styled.div`
   height: 100%;

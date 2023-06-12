@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { theme } from "_theme/theme";
-import { breakpoints } from "../../../utils/breakpoints";
+import { breakpoints } from "_utils/breakpoints";
 
 export const Article = styled.article`
   background-color: ${theme.colors.darkGrey};
