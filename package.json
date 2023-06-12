@@ -26,7 +26,8 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test",
+    "test": "react-scripts test",
+    "git:prune": "git fetch origin && git branch -vv | grep ': gone]'| grep -v \"\\*\" | awk '{ print $1; }' | xargs -r git branch -d",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

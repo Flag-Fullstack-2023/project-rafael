@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { HeaderEl } from "./header.styled";
-import { Logo } from "_atoms/";
-import { NavBar } from "_molecules/";
-import NavProvider from "../../../context/nav-context";
 import { HashLink } from "react-router-hash-link";
+
+import { Logo } from "_atoms";
+import { NavBar } from "_molecules";
+
+import NavProvider from "_context/nav-context";
+
+import { HeaderEl } from "./header.styled";
+
 const Header = () => {
   const [bgColor, setBgColor] = useState(false);
 

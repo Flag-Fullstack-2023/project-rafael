@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import { InputWrapper } from "./input.styled";
 
-const Input = ({ label, name, type, placeholder }) => {
+const InputEmail = ({ label, name, type, placeholder }) => {
   const [enteredEmail, setEnteredEmail] = useState("");
-  const [error, setError] = useState(null);
+  const [isInvalid, setIsInvalid] = useState(null);
 
   const isValidEmail = (email) => {
     return /\S+@\S+\.\S+/.test(email);
   };
 
   const onChangeHandler = (event) => {
-    if (!isValidEmail(event.target.value)) {
-      setError("Email is invalid");
-    } else {
-      setError(null);
-    }
-
     setEnteredEmail(event.target.value);
+  };
+
+  const emailValidation = () => {
+    if (!isValidEmail(enteredEmail)) {
+      setIsInvalid("Email is invalid");
+    } else {
+      setIsInvalid(null);
+    }
   };
 
   return (
@@ -28,10 +30,11 @@ const Input = ({ label, name, type, placeholder }) => {
         placeholder={placeholder}
         value={enteredEmail}
         onChange={onChangeHandler}
+        onBlur={emailValidation}
       />
-      {error && <p>{error}</p>}
+      {isInvalid && <p>{isInvalid}</p>}
     </InputWrapper>
   );
 };
 
-export default Input;
+export default InputEmail;

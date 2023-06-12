@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "../../../utils/breakpoints";
+import { breakpoints } from "_utils/breakpoints";
 
 export const NavBarEl = styled.nav`
   align-items: center;
@@ -44,10 +44,6 @@ export const NavBarEl = styled.nav`
       font-size: 3.157rem;
     }
   }
-
-  /**************************/
-  /*      BELOW 1079px      */
-  /**************************/
 
   @media ${breakpoints.untilLaptop} {
     background-color: rgba(0, 0, 0, 0.97);

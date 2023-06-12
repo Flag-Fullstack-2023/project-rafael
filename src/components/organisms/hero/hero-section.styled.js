@@ -32,6 +32,7 @@ export const HeroOverlay = styled.div`
     position: absolute;
     bottom: 3%;
     transition: all ease-in-out 0.4s;
+    transform: translateX(-50%);
 
     :hover {
       bottom: 2%;

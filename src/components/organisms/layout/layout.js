@@ -1,8 +1,9 @@
 import React from "react";
-import { Header, Footer } from "_organisms/";
 import { Outlet } from "react-router-dom";
 
-const RootLayout = () => {
+import { Header, Footer } from "_organisms";
+
+const Layout = () => {
   return (
     <React.Fragment>
       <Header />
@@ -14,4 +15,4 @@ const RootLayout = () => {
   );
 };
 
-export default RootLayout;
+export default Layout;

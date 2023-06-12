@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 import { toRem } from "./mixins";
+import { theme } from "../theme/theme";
 export const GlobalStyle = createGlobalStyle`
+
+
 *,
   *::before,
   *::after {
@@ -21,12 +24,13 @@ export const GlobalStyle = createGlobalStyle`
 
   main{
     margin: 0 auto;
-  width: 100vw;
+    width: 100vw;
+    min-height: calc(100vh - 20rem);
+    background-color: ${theme.colors.darkGrey};
   }
 
   body {
     position: relative;
-    overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: ${toRem(16)};
@@ -40,6 +44,17 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
     outline: none;
     background: none;
+  }
+
+  input {
+    outline: none;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    ::placeholder{
+      color: ${theme.colors.lightGrey};
+    }
   }
 
   p {margin-bottom: 1rem;}

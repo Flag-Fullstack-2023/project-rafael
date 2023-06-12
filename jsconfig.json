@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "target": "es6",
     "baseUrl": ".",
     "paths": {
-      "_components/*": ["./src/components/*"],
-      "_atoms/*": ["./src/components/atoms/"],
-      "_molecules/*": ["./src/components/molecules/"],
-      "_organisms/*": ["./src/components/organisms/"],
-      "_sections/*": ["./src/components/sections/"],
-      "_pages/*": ["./src/pages/*"]
+      "_api/*": ["src/api/*"],
+      "_atoms": ["src/components/atoms"],
+      "_context/*": ["src/context/*"],
+      "_molecules": ["src/components/molecules"],
+      "_organisms": ["src/components/organisms"],
+      "_pages": ["src/pages"],
+      "_theme/*": ["src/theme/*"],
+      "_utils/*": ["src/utils/*"]
     }
   },
   "include": ["src/**/*"],
