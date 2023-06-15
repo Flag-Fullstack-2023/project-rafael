@@ -4,10 +4,17 @@ This is a two page website about the peak of the rivalry between two legendary F
 
 ## Contents
 
+- [Preview](#Preview)
 - [Screenshots](#Screenshots)
 - [Usage](#Usage)
 - [Features](#Features)
 - [Technologies Used](#Technologies-Used)
+
+## Preview
+
+```bash
+https://rafael-2023-flag.netlify.app/
+```
 
 ## Screenshots
 
