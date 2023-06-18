@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { HashLink } from "react-router-hash-link";
 
+import NavProvider from "_context/nav-context";
+
 import { Logo } from "_atoms";
 import { NavBar } from "_molecules";
-
-import NavProvider from "_context/nav-context";
 
 import { HeaderEl } from "./header.styled";
 

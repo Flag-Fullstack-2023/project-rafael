@@ -12,24 +12,28 @@ const NavBar = () => {
   const { navClass, setNavClass } = useContext(NavContext);
 
   const linkOnClickHandler = () => {
-    console.log("clicked");
     navClass === "" ? setNavClass("nav_open") : setNavClass("");
     setIsOpen(!isOpen);
+  };
+
+  const hashLinkOnClickHandler = () => {
+    setIsOpen(false);
+    setNavClass("");
   };
 
   return (
     <>
       <NavBarEl className={navClass}>
-        <HashLink smooth to="/#1" onClick={linkOnClickHandler}>
+        <HashLink smooth to="/#1" onClick={hashLinkOnClickHandler}>
           The Car
         </HashLink>
-        <HashLink smooth to="/#Alain Prost" onClick={linkOnClickHandler}>
+        <HashLink smooth to="/#Alain Prost" onClick={hashLinkOnClickHandler}>
           Alain Prost
         </HashLink>
-        <HashLink smooth to="/#Ayrton Senna" onClick={linkOnClickHandler}>
+        <HashLink smooth to="/#Ayrton Senna" onClick={hashLinkOnClickHandler}>
           Ayrton Senna
         </HashLink>
-        <HashLink smooth to="/#Championship" onClick={linkOnClickHandler}>
+        <HashLink smooth to="/#Championship" onClick={hashLinkOnClickHandler}>
           1989 Championship
         </HashLink>
       </NavBarEl>

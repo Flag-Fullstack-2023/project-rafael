@@ -1,5 +1,5 @@
-import { useLoader } from "@react-three/fiber";
 import React, { useEffect } from "react";
+import { useLoader } from "@react-three/fiber";
 import { Mesh } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 

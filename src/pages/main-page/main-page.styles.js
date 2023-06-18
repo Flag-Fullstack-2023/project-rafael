@@ -14,4 +14,5 @@ export const CarWrapper = styled.div`
 export const TableWrapper = styled.article`
   display: flex;
   justify-content: center;
+  position: relative;
 `;
