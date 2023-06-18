@@ -1,6 +1,6 @@
+import React, { useEffect } from "react";
 import { MeshReflectorMaterial } from "@react-three/drei";
 import { useLoader } from "@react-three/fiber";
-import React, { useEffect } from "react";
 import { LinearEncoding, RepeatWrapping, TextureLoader } from "three";
 
 const Ground = () => {

@@ -13,12 +13,10 @@ const Section = (props) => {
 
   if (!PRESETS.includes(preset)) {
     preset = "text-first";
-    console.warn("NO PRESET", props);
   }
 
   if (!variant) {
     variant = "dark";
-    console.warn("NO variant", props);
   }
 
   return (

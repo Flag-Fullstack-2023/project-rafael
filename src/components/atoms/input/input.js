@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { InputWrapper } from "./input.styled";
 
+const isValidEmail = (email) => {
+  return /\S+@\S+\.\S+/.test(email);
+};
+
 const InputEmail = ({ label, name, type, placeholder }) => {
   const [enteredEmail, setEnteredEmail] = useState("");
   const [isInvalid, setIsInvalid] = useState(null);
-
-  const isValidEmail = (email) => {
-    return /\S+@\S+\.\S+/.test(email);
-  };
 
   const onChangeHandler = (event) => {
     setEnteredEmail(event.target.value);

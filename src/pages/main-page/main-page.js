@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Toggle from "react-styled-toggle";
 import axios from "axios";
 
-import { Button } from "_atoms";
+import { Button, LoadingState } from "_atoms";
 import { Gallery, Showroom, Table } from "_molecules";
 import { Section, Hero } from "_organisms";
 
@@ -19,6 +19,7 @@ const MainPage = () => {
   const [carInfo, setCarInfo] = useState({});
   const [tableInfo, setTableInfo] = useState({});
   const [tableName, setTableName] = useState("prost");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     axios.get(`${F1_FLAG_URL}/drivers`).then((response) => {
@@ -37,10 +38,12 @@ const MainPage = () => {
       .get(`${ERGAST_URL}/1989/drivers/${tableName}/results.json`)
       .then((response) => {
         setTableInfo(response.data.MRData.RaceTable.Races);
+        setLoading(false);
       });
   }, [tableName]);
 
   const onChangeHandle = (e) => {
+    setLoading(true);
     setTableName((prevValue) => (prevValue === "senna" ? "prost" : "senna"));
   };
 
@@ -100,7 +103,8 @@ const MainPage = () => {
             onChange={onChangeHandle}
           />
           <TableWrapper>
-            <Table preset="ProstVsSenna" info={tableInfo} />
+            <Table preset="ProstVsSenna" info={tableInfo}></Table>
+            {loading && <LoadingState pageType="main" />}
           </TableWrapper>
           <Link to="/other-results">
             <Button preset="primary">CHECK OTHER RESULTS</Button>
