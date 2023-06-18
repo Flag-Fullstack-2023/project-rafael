@@ -6,3 +6,4 @@ export { default as Logo } from "./logo/logo";
 export { default as InputEmail } from "./input/input";
 export { default as SectionText } from "./section-text/section-text";
 export { default as SectionTitle } from "./section-title/section-title";
+export { default as LoadingState } from "./loading-state/loading-state";

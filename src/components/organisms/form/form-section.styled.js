@@ -40,33 +40,6 @@ export const Article = styled.article`
       color: ${theme.colors.marlboroRed};
       margin: 0 auto;
     }
-
-    .loading {
-      width: 100%;
-      height: 100%;
-      background-color: ${theme.colors.black};
-      opacity: 50%;
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 1rem;
-      margin: -4rem 0;
-
-      svg {
-        font-size: 6rem;
-        animation: rotation 0.4s infinite linear;
-
-        @keyframes rotation {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(359deg);
-          }
-        }
-      }
-    }
   }
 
   @media ${breakpoints.forBigMobile} {

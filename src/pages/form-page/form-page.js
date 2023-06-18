@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { AiOutlineLoading } from "react-icons/ai";
-import { ERGAST_URL } from "_api/api";
+import axios from "axios";
 
-import { Button } from "_atoms";
+import { Button, LoadingState } from "_atoms";
 import { Table } from "_molecules";
 import { FormSection } from "_organisms";
-import axios from "axios";
+
+import { ERGAST_URL } from "_api/api";
 
 const years = [];
 const currentYear = new Date().getFullYear();
@@ -29,6 +29,7 @@ const FormPage = () => {
 
   const yearChangeHandler = (event) => {
     setEnteredYear(event.target.value);
+    setAvailableCircuits({});
     axios
       .get(`${ERGAST_URL}/${event.target.value}/circuits.json`)
       .then((response) => {
@@ -57,7 +58,6 @@ const FormPage = () => {
       .catch((err) => {
         setLoading(false);
         setError(true);
-        console.log(err);
       });
   };
 
@@ -110,11 +110,7 @@ const FormPage = () => {
       </div>
       {error && <p>Sorry, there was an error, try again?</p>}
       {noData && <p>Sorry, there was no data, try again?</p>}
-      {loading && (
-        <div className="loading">
-          <AiOutlineLoading />
-        </div>
-      )}
+      {loading && <LoadingState pageType="form" />}
       {!noData && Object.keys(raceInfo).length > 0 && (
         <Table preset="other" info={raceInfo.MRData.RaceTable.Races} />
       )}
